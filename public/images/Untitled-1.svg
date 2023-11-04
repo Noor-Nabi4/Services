@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #6548c2;
+        stroke: #fff;
+        stroke-linejoin: round;
+        stroke-width: 4px;
+        fill-rule: evenodd;
+        filter: url(#filter);
+      }
+    </style>
+    <filter id="filter" x="-53" y="-3" width="2027" height="338" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" dy="47" in="SourceAlpha"/>
+      <feGaussianBlur result="blur" stdDeviation="7.348"/>
+      <feFlood result="flood" flood-color="#000560" flood-opacity="0.5"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feBlend result="blend" in="SourceGraphic"/>
+      <feImage preserveAspectRatio="none" x="0" y="3" width="1920" height="230.531" result="image" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTkyMCIgaGVpZ2h0PSIyMzAuNTMxIiB2aWV3Qm94PSIwIDAgMTkyMCAyMzAuNTMxIj4KICA8ZGVmcz4KICAgIDxzdHlsZT4KICAgICAgLmNscy0xIHsKICAgICAgICBmaWxsOiB1cmwoI2xpbmVhci1ncmFkaWVudCk7CiAgICAgIH0KICAgIDwvc3R5bGU+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImxpbmVhci1ncmFkaWVudCIgeDE9IjEwMzQuODU0IiB4Mj0iODg1LjE0NiIgeTI9IjIzMC41MzEiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSItMC4yNSIgc3RvcC1jb2xvcj0iIzI5MjQ2NCIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEuMjUiIHN0b3AtY29sb3I9IiM1YzQ0YjciLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IGNsYXNzPSJjbHMtMSIgd2lkdGg9IjE5MjAiIGhlaWdodD0iMjMwLjUzMSIvPgo8L3N2Zz4K"/>
+      <feComposite result="composite-2" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend-2" in2="blend"/>
+    </filter>
+  </defs>
+  <g style="fill: #6548c2; filter: url(#filter)">
+    <path id="Last_Rectangle" data-name="Last Rectangle" class="cls-1" d="M0,3c712.668,0.927,1081.45.865,1920.01,2.034-278.18,44.73-394.7,90.044-440.89,135.43-26.21,25.667-39.41,48.946-57.46,65.8-17.23,16.853-39.33,27.28-64.19,27.28H436.1c-24.851,0-47.046-10.425-64.006-27.283-17.562-16.858-29.888-40.15-48.925-65.921C289.3,94.752,205.821,49.036,0,3Z" style="stroke: inherit; filter: none; fill: inherit"/>
+  </g>
+  <use xlink:href="#Last_Rectangle" style="stroke: #fff; filter: none; fill: none"/>
+</svg>

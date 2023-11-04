@@ -1,0 +1,283 @@
+/* ! tailwindcss v3.2.4 | MIT License | https://tailwindcss.com */
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: #e5e7eb;
+
+}
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+::after,
+::before {
+    --tw-content: ''
+}
+
+.bg-gray-100 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(243 244 246 / var(--tw-bg-opacity))
+}
+
+html {
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    -moz-tab-size: 4;
+    tab-size: 4;
+    font-family: Figtree, sans-serif;
+    font-feature-settings: normal
+}
+
+body {
+    margin: 0;
+    line-height: inherit;
+    font-size: 1rem;
+    font-family: "Myriad Pro Regular";
+    font-weight: 300;
+    color: black;
+    background-color: #eff2fb
+}
+
+.antialiased {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.guest .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.guest .navbar .brand a {
+    color: #6610f2;
+    font-size: 1.5rem;
+    line-height: 55px;
+    margin-right: 0;
+    padding: 0.25rem 0;
+    font-weight: 700;
+}
+
+.guest .navbar a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #24045A;
+    padding: 12px;
+    margin: 0 5px;
+    text-decoration: none;
+}
+
+
+.guest .navbar .signup a {
+    background: transparent;
+    background-color: #7750f6;
+    border-radius: 10px !important;
+    box-shadow: 0 0 10px 0 #7750f6;
+    color: #fff;
+    border: transparent;
+}
+
+.banner {
+
+    position: absolute;
+    max-width: 100%;
+    min-height: 25rem;
+    min-width: 100%;
+}
+
+.circle {
+    background-color: #8d99b1;
+    opacity: 29%;
+    min-height: 81vh;
+    border-radius: 50%;
+    max-width: 27vw;
+    left: 72%;
+    top: -4.7rem;
+    position: relative;
+}
+
+.form-control {
+    display: inline-block;
+    width: 90%;
+}
+
+/* .point-items {} */
+
+.point-item {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.09);
+    margin-top: 0.5rem !important;
+    background: #fff;
+    border-radius: 10px;
+    padding: 0.25rem;
+
+}
+
+.circle-badege {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-right: -1.25rem;
+    background: #f3effe;
+    border-radius: 50%;
+}
+
+.circle-badege svg,
+.circle-badege image {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.submit-button {
+    background: #7045f6;
+    color: #fff;
+    padding: 8px 10px;
+    border-radius: 1rem;
+    width: 100%;
+}
+
+.happy-clients {
+    /* background: #fff;
+    border-radius: 1rem;
+    padding: 2px; */
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    background: #ffffffb8;
+    padding: 0 16px 0 6px;
+    border-radius: 55px;
+    margin-top: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid #7045f6;
+}
+.happy-clients img:first-child {
+    margin-left: 0;
+}
+.happy-clients img {
+    max-width: 50px;
+    border: 3px solid #ffffff;
+    border-radius: 29px;
+    margin-left: -10px;
+}
+.happy-clients>div>p{
+    margin: 0;
+    margin-left: 10px;
+    color: #242424;
+}
+.happy-clients>div>p:first-child{
+    font-size: 13px;
+    background: #7045f6;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.happy-clients-circle {
+    border: 1px solid #fff;
+    background: aqua;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ul.services-products li {
+    /* padding: 5px; */
+    color: #fff;
+    margin-bottom: 0.4rem;
+    display: flex;
+    align-items: baseline;
+}
+
+ul.services-products li>.first {
+    line-height: 2;
+    padding-left: 1rem;
+    background-image: linear-gradient(to right, #7750F6, purple, black);
+}
+
+ul.services-products li>.second {
+    padding-left: 0.75rem;
+    background-image: linear-gradient(to right, #7750F6, purple, black);
+}
+
+.smmservice-circle {
+    box-shadow: inset 1rem 1rem 5rem 1rem white;
+    border-radius: 50%;
+}
+
+h1.section-title {
+    margin: -2rem 0 0 31.5rem;
+    border-radius: 3rem;
+    padding: 0.5rem;
+    font-size: 1.3rem !important;
+    box-shadow: rgb(0, 0, 0, 0.6) 0px 20px 30px;
+
+}
+
+.smm-header {
+    color: black;
+    background-color: #ffd8eb;
+    border-radius: 3rem;
+    margin-top: -1.5rem;
+}
+
+.smm-header>img {
+    width: 5vw;
+    height: 12vh;
+}
+
+.w-65 {
+    width: 65% !important;
+}
+
+
+.font-svg-step {
+    font-family: "Copperplate Gothic Bold", sans-serif;
+}
+
+
+.font-Myriad-Pro-Bold{
+    font-family: "Myriad Pro Bold";
+}
+.font-Myriad-Pro-Regular{
+    font-family: "Myriad Pro Regular";
+}
+.txt-blue{
+    color: #7750f6;
+}
+.bg-o-blue{
+    background: #7750f6;
+}
+section#faq ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+section#faq ul li{
+    background: #5c44b7;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    border: 2px solid white;
+    border-radius: 0.5rem;
+}
+footer{
+    background: #120d27;
+}
+.get-started{
+    margin: 0 auto;
+    display: block;
+    padding: 0.5rem;
+    border-radius: 1.5rem;
+    background: #5c44b7;
+    color: white;
+    border: 1px solid #ffffff;
+}
+.payment-methods img{
+    width:7vw
+}
