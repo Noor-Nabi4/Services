@@ -10,8 +10,8 @@
 }
 
 * {
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -154,21 +154,25 @@ body {
     backdrop-filter: blur(10px);
     border: 2px solid #7045f6;
 }
+
 .happy-clients img:first-child {
     margin-left: 0;
 }
+
 .happy-clients img {
     max-width: 50px;
     border: 3px solid #ffffff;
     border-radius: 29px;
     margin-left: -10px;
 }
-.happy-clients>div>p{
+
+.happy-clients>div>p {
     margin: 0;
     margin-left: 10px;
     color: #242424;
 }
-.happy-clients>div>p:first-child{
+
+.happy-clients>div>p:first-child {
     font-size: 13px;
     background: #7045f6;
     -webkit-background-clip: text;
@@ -211,10 +215,13 @@ ul.services-products li>.second {
 }
 
 h1.section-title {
-    margin: -2rem 0 0 31.5rem;
+    padding: 0.1rem 0.5rem;
+    font-size: 2.5rem !important;
+    max-width: fit-content;
+    margin: 0 auto;
+    font-family: "Myriad Pro Bold";
     border-radius: 3rem;
     padding: 0.5rem;
-    font-size: 1.3rem !important;
     box-shadow: rgb(0, 0, 0, 0.6) 0px 20px 30px;
 
 }
@@ -239,37 +246,65 @@ h1.section-title {
 .font-svg-step {
     font-family: "Copperplate Gothic Bold", sans-serif;
 }
-
-
-.font-Myriad-Pro-Bold{
+.font-112{
+    font-size:7rem;
+}
+.o-orange{
+    color: #ffbb53;
+}
+.o-a-blue{
+    color: #6e51c9;
+}
+.font-AmbienteSostenible {
+    font-family: "AmbienteSostenible";
+}
+.font-Myriad-Pro-Bold {
     font-family: "Myriad Pro Bold";
 }
-.font-Myriad-Pro-Regular{
+
+.font-Myriad-Pro-Regular {
     font-family: "Myriad Pro Regular";
 }
-.txt-blue{
+
+.txt-blue {
     color: #7750f6;
 }
-.bg-o-blue{
+
+.bg-o-blue {
     background: #7750f6;
 }
-section#faq ul{
+
+section#faq ul {
+    max-width: fit-content;
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
 }
-section#faq ul li{
-    background: #5c44b7;
+
+section#faq ul li {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(to right, #333366 , #5c44b7);
     color: white;
     text-align: center;
-    padding: 5px;
+    padding: .5rem 2rem;
     border: 2px solid white;
     border-radius: 0.5rem;
+    margin-bottom: .3rem;
 }
-footer{
+
+section#faq ul li>div {
+    margin-bottom: -1rem;
+}
+
+section#faq ul li>div img {
+    width: 1rem;
+}
+
+footer {
     background: #120d27;
 }
-.get-started{
+
+.get-started {
     margin: 0 auto;
     display: block;
     padding: 0.5rem;
@@ -278,6 +313,11 @@ footer{
     color: white;
     border: 1px solid #ffffff;
 }
-.payment-methods img{
-    width:7vw
+
+.payment-methods img {
+    width: 7vw
+}
+
+.mt--2rem {
+    margin-top: -2rem;
 }
