@@ -69,14 +69,14 @@
             <div class="login">
                 <div class="row">
                     <div class="col-md-6">
-                        <form action="" autocomplete="off">
+                        <form action="{{ route('login') }}" autocomplete="off">
                             @csrf
                             <div class="mb-3 d-flex">
-                                <label for="username" class=""
+                                <label for="email" class=""
                                     style="background-color: #7750f6;padding:0.5rem;border-radius:4px">
                                     <i class="fa-solid fa-user" style="color: #ffffff;" style="font-size:25px"></i>
                                 </label>
-                                <input type="text" class="form-control" id="username" name="username"
+                                <input type="text" class="form-control" id="email" name="email"
                                     placeholder="UserName Or Email">
                             </div>
                             <div class="mb-3 d-flex">
@@ -107,7 +107,7 @@
                                     </button>
                                 </div>
                                 <div class="col-md-6">
-                                    <a type="submit" class="submit-button text-decoration-none text-center"
+                                    <a href="{{ route('register') }}" class="submit-button text-decoration-none text-center"
                                         style="background: #fec151">
                                         Sign Up
                                         <i class="fas fa-smile-plus"
