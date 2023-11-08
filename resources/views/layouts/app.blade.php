@@ -24,7 +24,7 @@
         <!-- Styles -->
         @livewireStyles
     </head>
-    <body class="font-sans antialiased">
+    <body class="container-xxl">
         <x-banner />
 
         <div class="min-h-screen bg-gray-100">

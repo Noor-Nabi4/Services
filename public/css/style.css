@@ -1,4 +1,4 @@
-/* ! tailwindcss v3.2.4 | MIT License | https://tailwindcss.com */
+
 *,
 ::after,
 ::before {
@@ -178,7 +178,6 @@ body {
 .happy-clients>div>p:first-child {
     font-size: 13px;
     background: #7045f6;
-    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -326,4 +325,11 @@ footer {
 
 .mt--2rem {
     margin-top: -2rem;
+}
+
+
+.total-details-card{
+    padding: 1rem 2.5rem;
+    color: #fff;
+    background-color: #453692;
 }
