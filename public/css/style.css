@@ -389,3 +389,10 @@ footer {
     background: #916dfd;
     color: #fff;
 }
+
+
+/* Order Now */
+
+.order-card{
+    border: 1px solid #c5caca;
+}

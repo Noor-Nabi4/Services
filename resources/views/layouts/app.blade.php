@@ -37,14 +37,57 @@
             @if (isset($header))
                 <header class=" mx-4" style="background: #0056b30d;">
                     <div class="max-w-7xl mx-auto py-3 px-4 sm:px-6 lg:px-8">
-                        {{ $header }}
+                        {{-- {{ $header }} --}}
+                        <div class="row menu-links">
+                            <div class="col">
+                                <a href="" class="text-uppercase">
+                                    <img src="{{ asset('images/svg/Order Now Icon Blue.svg') }}" alt="Order Now Icon">
+                                    <h6>
+                                        Order Now
+
+                                    </h6>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="" class="text-uppercase">
+                                    <img src="{{ asset('images/svg/Services Icon Blue.svg') }}" alt="Order Now Icon">
+                                    <h6>
+                                        Services
+                                    </h6>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="" class="text-uppercase">
+                                    <img src="{{ asset('images/svg/Get Support Icon Blue.svg') }}" alt="Order Now Icon">
+                                    <h6>
+                                        Get Support
+                                    </h6>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="" class="text-uppercase">
+                                    <img src="{{ asset('images/svg/Marketplace Products Icon Blue.svg') }}" alt="Order Now Icon">
+                                    <h6>
+                                        Our PRODUCTS
+                                    </h6>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="" class="text-uppercase">
+                                    <img src="{{ asset('images/svg/Dashboard Icon Blue.svg') }}" alt="Order Now Icon">
+                                    <h6>
+                                        Dashboard
+                                    </h6>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </header>
                 <div class="shadow"  style="min-height: 2rem"></div>
             @endif
 
             <!-- Page Content -->
-            <main>
+            <main class="mx-4 ">
                 {{ $slot }}
             </main>
         </div>

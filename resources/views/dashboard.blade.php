@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
-        <div class="row menu-links">
+        {{-- <div class="row menu-links">
             <div class="col">
                 <a href="" class="text-uppercase">
                     <img src="{{ asset('images/svg/Order Now Icon Blue.svg') }}" alt="Order Now Icon">
@@ -42,9 +42,9 @@
                     </h6>
                 </a>
             </div>
-        </div>
+        </div> --}}
     </x-slot>
-    <div class="mX-2">
+    <div class="">
         <h2 class="text-center my-3 font-arial" style="color: #916dfd">
             <span class="font-EmojiOneColor">👋</span> Hi there,
             {{ Auth::user()->first_name . ' ' . Auth::user()->last_name }}!
