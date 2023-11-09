@@ -15,8 +15,11 @@
             integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
             <link rel="stylesheet" href="{{ asset('\fonts\MYRIADPRO\style.css') }}">
-            <link rel="stylesheet" href="{{ asset('css/style.css') }}">
             <link rel="stylesheet" href="{{ asset('fonts/ambiente-sostenible_woff/style.css') }}">
+            <link rel="stylesheet" href="{{ asset('fonts/open_sans/style.css') }}">
+            <link rel="stylesheet" href="{{ asset('fonts/EmojiOne/style.css') }}">
+            <link rel="stylesheet" href="{{ asset('fonts/Raleway/style.css') }}">
+            <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -24,7 +27,7 @@
         <!-- Styles -->
         @livewireStyles
     </head>
-    <body class="container-xxl">
+    <body class="container-xxl" style="background: #f6fcfc">
         <x-banner />
 
         <div class="min-h-screen bg-gray-100">
@@ -32,11 +35,12 @@
 
             <!-- Page Heading -->
             @if (isset($header))
-                <header class="bg-white shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                <header class=" mx-4" style="background: #0056b30d;">
+                    <div class="max-w-7xl mx-auto py-3 px-4 sm:px-6 lg:px-8">
                         {{ $header }}
                     </div>
                 </header>
+                <div class="shadow"  style="min-height: 2rem"></div>
             @endif
 
             <!-- Page Content -->

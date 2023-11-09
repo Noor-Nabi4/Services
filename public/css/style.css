@@ -1,3 +1,4 @@
+@import url('https://fonts.cdnfonts.com/css/raleway-5');
 
 *,
 ::after,
@@ -8,9 +9,11 @@
     border-color: #e5e7eb;
 
 }
-.m-0-auto{
+
+.m-0-auto {
     margin: 0 auto;
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -248,21 +251,27 @@ h1.section-title {
 .font-svg-step {
     font-family: "Copperplate Gothic Bold", sans-serif;
 }
-.font-112{
-    font-size:7rem;
+
+.font-112 {
+    font-size: 7rem;
 }
-.o-orange{
+
+.o-orange {
     color: #ffbb53;
 }
-.o-a-blue{
+
+.o-a-blue {
     color: #6e51c9;
 }
+
 .font-AmbienteSostenible {
     font-family: "AmbienteSostenible";
 }
+
 .font-Myriad-Pro-Semibold {
     font-family: "Myriad Pro Semibold";
 }
+
 .font-Myriad-Pro-Bold {
     font-family: "Myriad Pro Bold";
 }
@@ -288,7 +297,7 @@ section#faq ul {
 
 section#faq ul li {
     font-family: Arial, Helvetica, sans-serif;
-    background-image: linear-gradient(to right, #333366 , #5c44b7);
+    background-image: linear-gradient(to right, #333366, #5c44b7);
     color: white;
     text-align: center;
     padding: .5rem 2rem;
@@ -327,9 +336,56 @@ footer {
     margin-top: -2rem;
 }
 
+.nav-icons li {
+    margin-right: .5rem;
+    background: #e5f0f7;
+    border-radius: 50%;
+    max-width: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-.total-details-card{
+.total-details-card {
     padding: 1rem 2.5rem;
     color: #fff;
-    background-color: #453692;
+    background-image: linear-gradient(to right, #292464, #5c44b7);
+    border: 5px solid #fff;
+}
+
+.total-details-card .line {
+    background-image: linear-gradient(to right, #9966ff, #ffbb53);
+    min-width: 100%;
+    min-height: 0.225rem;
+    border-radius: 10px;
+}
+
+.menu-links div a {
+    display: flex;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+}
+
+.menu-links div a img {
+    margin-right: .25rem;
+    width: 1rem;
+}
+
+.menu-links div a h6 {
+    margin-bottom: -2px;
+    display: flex;
+    align-items: end;
+}
+
+.font-arial {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.history a{
+    padding: 2px 10px;
+    border-radius: 5px;
+    border: 1px solid #b39dfd;
+}
+.history a.active{
+    background: #916dfd;
+    color: #fff;
 }
