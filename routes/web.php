@@ -25,5 +25,5 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
-    Route::view('/order', 'Order_Now');
+    Route::view('/order', 'Order_Now')->name('order_now');
 });

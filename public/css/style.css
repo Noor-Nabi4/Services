@@ -380,12 +380,14 @@ footer {
 .font-arial {
     font-family: Arial, Helvetica, sans-serif;
 }
-.history a{
+
+.history a {
     padding: 2px 10px;
     border-radius: 5px;
     border: 1px solid #b39dfd;
 }
-.history a.active{
+
+.history a.active {
     background: #916dfd;
     color: #fff;
 }
@@ -393,6 +395,28 @@ footer {
 
 /* Order Now */
 
-.order-card{
+.order-card,
+.order-card-details {
     border: 1px solid #c5caca;
+}
+
+
+.deatils {
+    background-color: #e5f0f7;
+}
+
+.detail-sec {}
+
+.detail-sec-logo {
+    height: 1rem;
+    background: #916dfd;
+}
+
+.detail-sec-logo img {
+    width: 1rem;
+    height: 1rem;
+
+}
+.social-account-link{
+background-color: #e5f0f7;
 }

@@ -109,7 +109,7 @@
         </h1>
         <div class="d-flex my-3 justify-content-center">
             <div class="" style="background: #916dfd" style="padding: 5px">
-                <img src="{{ asset('images/svg/Search Icon.svg') }}" alt="Search Icon" style="2rem">
+                <img src="{{ asset('images/svg/Search.svg') }}" alt="Search" style="2rem">
             </div>
             <input type="text" class="form-control w-100">
             <button type="submit" class="btn text-white" style="background: #fdc877;">X</button>
