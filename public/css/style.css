@@ -417,6 +417,22 @@ footer {
     height: 1rem;
 
 }
-.social-account-link{
-background-color: #e5f0f7;
+
+.social-account-link {
+    background-color: #e5f0f7;
+}
+
+.order-page-links {
+    border-bottom: 1px solid #c5caca;
+    padding-bottom: 1rem;
+}
+
+.order-page-link {
+    margin-right: .5rem;
+
+}
+
+.order-page-link a img {
+    display: inline;
+    height: 1rem;
 }

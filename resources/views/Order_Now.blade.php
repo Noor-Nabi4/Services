@@ -46,19 +46,25 @@
         <div class="row">
             <div class="col-md me-5">
                 <div class="order-card p-2 pt-4">
-                    <div class=" mb-3 d-flex">
-                        <a href="">
-                            <img src="{{ asset('images/svg/New ORDER.svg') }}" alt="New ORDER">
-                            New Order
-                        </a>
-                        <a href="">
-                            <img src="{{ asset('images/svg/New ORDER.svg') }}" alt="New ORDER">
-                            My Favorites
-                        </a>
-                        <a href="">
-                            <img src="{{ asset('images/svg/Search brown.svg') }}" alt="Search">
-                            Search By ID
-                        </a>
+                    <div class=" mb-3 d-flex order-page-links">
+                        <div class="order-page-link">
+                            <a href="">
+                                <img src="{{ asset('images/svg/New ORDER.svg') }}" alt="New ORDER">
+                                New Order
+                            </a>
+                        </div>
+                        <div class="order-page-link">
+                            <a href="">
+                                <img src="{{ asset('images/svg/New ORDER.svg') }}" alt="New ORDER">
+                                My Favorites
+                            </a>
+                        </div>
+                        <div class="order-page-link">
+                            <a href="">
+                                <img src="{{ asset('images/svg/Search brown.svg') }}" alt="Search">
+                                Search By ID
+                            </a>
+                        </div>
                     </div>
                     <div class="mb-3">
                         <div class="d-flex">
@@ -103,15 +109,19 @@
             </div>
             <div class="col-md">
                 <div class="order-card-details p-2 pt-4">
-                    <div class="mb-3 d0flex">
-                        <a href="">
-                            <img src="{{ asset('images/svg/Info.svg') }}" alt="info">
-                            Details
-                        </a>
-                        <a href="">
-                            <img src="{{ asset('images/svg/Contact US.svg') }}" alt="Contact US">
-                            Contact Us
-                        </a>
+                    <div class="mb-3 d-flex order-page-links">
+                        <div class="order-page-link">
+                            <a href="">
+                                <img src="{{ asset('images/svg/Info.svg') }}" alt="info">
+                                Details
+                            </a>
+                        </div>
+                        <div class="order-page-link">
+                            <a href="">
+                                <img src="{{ asset('images/svg/Contact US.svg') }}" alt="Contact US">
+                                Contact Us
+                            </a>
+                        </div>
                     </div>
                     <div class="mb-3">
                         <div class="deatils pe-3">
