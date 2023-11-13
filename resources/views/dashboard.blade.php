@@ -131,5 +131,47 @@
                 Canceled
             </a>
         </div>
+        <table class="table table-striped mt-3">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Service</th>
+                    <th scope="col">Link</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Charge</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Info</th>
+                    <th scope="col">Re Order</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        001
+                    </td>
+                    <td>
+                        Youtube
+                    </td>
+                    <td>
+                        Link
+                    </td>
+                    <td>
+                        in progress
+                    </td>
+                    <td>
+                        Pkr 3800
+                    </td>
+                    <td>
+                        1000
+                    </td>
+                    <td>
+                        Details
+                    </td>
+                    <td>
+                        Order Again
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </x-app-layout>

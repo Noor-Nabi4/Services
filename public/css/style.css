@@ -1,4 +1,5 @@
 @import url('https://fonts.cdnfonts.com/css/raleway-5');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
 
 *,
 ::after,
@@ -8,6 +9,9 @@
     border-style: solid;
     border-color: #e5e7eb;
 
+}
+.font-sans{
+    font-family: 'Open Sans', sans-serif;
 }
 
 .m-0-auto {
@@ -399,13 +403,22 @@ footer {
 .order-card-details {
     border: 1px solid #c5caca;
 }
+.order-card label{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+}
 
 
 .deatils {
     background-color: #e5f0f7;
 }
 
-.detail-sec {}
+.detail-sec h4{
+    font-family: 'OpenSans-Bold';
+}
+.detail-sec p {
+    font-family: 'Open Sans', sans-serif;
+}
 
 .detail-sec-logo {
     height: 1rem;

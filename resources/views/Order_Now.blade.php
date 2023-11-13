@@ -204,7 +204,7 @@
                     </div>
                     <div class="mb-3">
                         <div class="">
-                            <div class="deatils">
+                            <div class="deatils detail-sec">
                                 <h4>
                                     Details
                                 </h4>

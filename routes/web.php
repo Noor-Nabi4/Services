@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +15,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    if(Auth::check()){
+        return redirect('/dashboard');
+    }
     return view('welcome');
 })->name('welcome');
 
@@ -22,8 +26,12 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
+    // Route::get('path', 'SomeController@method')
+    Route::view('/dashboard', 'dashboard')->name('dashboard');
+    /* Route::name('dashboard.')->prefix('dashboard')->group(function() {
+
+
+    }); */
+
     Route::view('/order', 'Order_Now')->name('order_now');
 });
