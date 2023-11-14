@@ -145,6 +145,7 @@
                 </tr>
             </thead>
             <tbody>
+                @foreach ($orders as $order )
                 <tr>
                     <td>
                         001
@@ -171,7 +172,13 @@
                         Order Again
                     </td>
                 </tr>
+
+                @endforeach
             </tbody>
         </table>
     </div>
+
+
+    <x-slot name="footer">
+    </x-slot>
 </x-app-layout>

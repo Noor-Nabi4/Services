@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\OrderController;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,12 +28,11 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
-    // Route::get('path', 'SomeController@method')
-    Route::view('/dashboard', 'dashboard')->name('dashboard');
+    Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
     /* Route::name('dashboard.')->prefix('dashboard')->group(function() {
 
 
     }); */
 
-    Route::view('/order', 'Order_Now')->name('order_now');
+    Route::get('/order', 'OrderController@create')->name('order_now');
 });
