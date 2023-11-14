@@ -34,49 +34,16 @@
             </div>
         </div>
 
-        <div class="mt-5">
-            <div class="d-flex">
-                <div class="" style="background: #916dfd" style="padding: 5px">
-                    <img src="{{ asset('images/svg/Search.svg') }}" alt="Search">
-                </div>
-                <input type="text" class="form-control w-100">
-                <button type="submit" class="d-block" style="background: #916dfd" style="padding: 5px">
-                    <img src="{{ asset('images/svg/Search.svg') }}" alt="Search" style="2rem">
-                </button>
+    </div>
+    <div class="mt-5">
+        <div class="d-flex">
+            <div class="" style="background: #916dfd" style="padding: 5px">
+                <img src="{{ asset('images/svg/Search.svg') }}" alt="Search">
             </div>
-            {{-- <select name="filter" id="filter">
-                <option value="" selected disabled>Filters Services</option>
-            </select>
-            <table>
-
-            </table> --}}
-            <table class="table table-striped mt-3">
-                <thead>
-                    <tr>
-                        <th>
-                            ID
-                        </th>
-                        <th>
-                            Service
-                        </th>
-                        <th>
-                            Rate Per 1000
-                        </th>
-                        <th>
-                            Min/Max
-                        </th>
-                        <th>
-                            Guaranty
-                        </th>
-                        <th>
-                            Avg. Time
-                        </th>
-                        <th>
-                            Description
-                        </th>
-                    </tr>
-                </thead>
-            </table>
+            <input type="text" class="form-control w-100">
+            <button type="submit" class="d-block" style="background: #916dfd" style="padding: 5px">
+                <img src="{{ asset('images/svg/Search.svg') }}" alt="Search" style="2rem">
+            </button>
         </div>
     </div>
 </x-app-layout>

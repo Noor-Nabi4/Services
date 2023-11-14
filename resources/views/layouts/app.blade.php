@@ -56,7 +56,7 @@
                         'name' => 'Get Support',
                     ],
                     [
-                        'route' => 'order_now',
+                        'route' => 'products.index',
                         'logo' => 'Marketplace Products',
                         'name' => 'Our PRODUCTS',
                     ],
