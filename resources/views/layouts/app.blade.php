@@ -46,7 +46,7 @@
                         'name' => 'Order Now',
                     ],
                     [
-                        'route' => 'order_now',
+                        'route' => 'services.index',
                         'logo' => 'Services',
                         'name' => 'Services',
                     ],

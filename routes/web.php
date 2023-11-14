@@ -35,4 +35,5 @@ Route::middleware([
     }); */
 
     Route::get('/order', 'OrderController@create')->name('order_now');
+    Route::get('/services', 'SevicesController@index')->name('services.index');
 });

@@ -10,7 +10,8 @@
     border-color: #e5e7eb;
 
 }
-.font-sans{
+
+.font-sans {
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -403,7 +404,8 @@ footer {
 .order-card-details {
     border: 1px solid #c5caca;
 }
-.order-card label{
+
+.order-card label {
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
 }
@@ -413,9 +415,10 @@ footer {
     background-color: #e5f0f7;
 }
 
-.detail-sec h4{
+.detail-sec h4 {
     font-family: 'OpenSans-Bold';
 }
+
 .detail-sec p {
     font-family: 'Open Sans', sans-serif;
 }
@@ -432,7 +435,15 @@ footer {
 }
 
 .social-account-link {
+    font-family: 'Raleway', sans-serif;
     background-color: #e5f0f7;
+
+}
+
+.social-account-link img {
+    display: inline-block;
+    height: 2rem;
+    width: 2rem;
 }
 
 .order-page-links {
@@ -448,4 +459,20 @@ footer {
 .order-page-link a img {
     display: inline;
     height: 1rem;
+}
+
+.heading {
+    display: flex;
+    justify-content: center;
+}
+
+.heading h1 {
+    font-size: 1.45em;
+    font-family: Raleway;
+    font-weight: 600
+}
+
+.heading img {
+    height: 1.45em;
+    display: inline-block;
 }

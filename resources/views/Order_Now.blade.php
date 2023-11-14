@@ -4,34 +4,26 @@
         <div class="row">
             <div class="col me-2 social-acconts">
                 <div class="social-account-link">
-                    <a href="">
                         <img src="{{ asset('images/svg/Youtube.svg') }}" alt="Youtube">
                         Youtube
-                    </a>
                 </div>
             </div>
             <div class="col me-2">
                 <div class="social-account-link">
-                    <a href="">
                         <img src="{{ asset('images/svg/Instagram.svg') }}" alt="Instagram">
                         Instagram
-                    </a>
                 </div>
             </div>
             <div class="col me-2">
                 <div class="social-account-link">
-                    <a href="">
                         <img src="{{ asset('images/svg/Facebook.svg') }}" alt="Facebook">
                         Facebook
-                    </a>
                 </div>
             </div>
             <div class="col me-2">
                 <div class="social-account-link">
-                    <a href="">
                         <img src="{{ asset('images/svg/tiktok.svg') }}" alt="tiktok">
                         TikTok
-                    </a>
                 </div>
             </div>
         </div>
