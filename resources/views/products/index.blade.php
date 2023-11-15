@@ -29,12 +29,16 @@
         Our Products
     </h1>
     <div class="row my-2 justify-content-center">
-        <div class="col-md-3 me-2">
+        @for ($i=0;$i<8;$i++)
+
+        <div class="col-md-3 me-2 my-2">
             <div class="card" style="width: 18rem;">
                 <img src="{{ asset('images/Youtube_Play_Button_English_textpsd.png') }}" class="card-img-top"
                     alt="Youtube Play Button">
                 <div class="card-body">
-                    <h2 class="card-title text-center">Card title</h2>
+                    <h2 class="card-title text-center font-Roboto">
+                        Custom YouTube Wood Play Button Creator Award
+                    </h2>
                     <h5>
                         11,500
                     </h5>
@@ -52,5 +56,6 @@
                 </div>
             </div>
         </div>
+        @endfor
     </div>
 </x-app-layout>

@@ -1,5 +1,5 @@
 @import url('https://fonts.cdnfonts.com/css/raleway-5');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto&display=swap');
 
 *,
 ::after,
@@ -506,7 +506,11 @@ footer {
     margin-right: 0.75rem;
     padding: 0px 4px;
 }
-.support-sub-button a img{
+
+.support-sub-button a img {
     width: 22px;
     height: 17px;
+}
+.font-Roboto{
+    font-family: 'Roboto', sans-serif;
 }
