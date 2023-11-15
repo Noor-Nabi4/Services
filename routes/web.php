@@ -37,4 +37,5 @@ Route::middleware([
     Route::get('/order', 'OrderController@create')->name('order_now');
     Route::get('/services', 'SevicesController@index')->name('services.index');
     Route::get('/products', 'ProductController@index')->name('products.index');
+    Route::get('/get_support', 'GetSupportController@index')->name('get_support.index');
 });

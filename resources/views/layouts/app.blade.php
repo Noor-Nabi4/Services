@@ -51,7 +51,7 @@
                         'name' => 'Services',
                     ],
                     [
-                        'route' => 'order_now',
+                        'route' => 'get_support.index',
                         'logo' => 'Get Support',
                         'name' => 'Get Support',
                     ],

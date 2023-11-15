@@ -476,3 +476,37 @@ footer {
     height: 1.45em;
     display: inline-block;
 }
+
+.support_buttons div {
+    display: flex;
+    padding-bottom: .5rem;
+    border-bottom: 1px solid #b4b9b9;
+}
+
+.support_buttons div a {
+    margin-right: .5rem;
+    display: flex;
+    align-items: center;
+    color: #bdc1c2;
+}
+
+.support_buttons div a img {
+    width: 29px;
+    height: 19px;
+}
+
+
+.support-sub-button a {
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    align-items: center;
+    background: #e9eafb;
+    border: 1px solid #dde2e2;
+    color: #9e82fd;
+    margin-right: 0.75rem;
+    padding: 0px 4px;
+}
+.support-sub-button a img{
+    width: 22px;
+    height: 17px;
+}
