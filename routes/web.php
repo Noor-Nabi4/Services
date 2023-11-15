@@ -2,8 +2,6 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\OrderController;
-use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,13 +27,17 @@ Route::middleware([
     'verified',
 ])->group(function () {
     Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
-    /* Route::name('dashboard.')->prefix('dashboard')->group(function() {
+    Route::name('services.')->prefix('services')->group(function() {
+    Route::get('/', 'ServiceController@index')->name('index');
+    Route::get('/create', 'ServiceController@create')->name('create');
+    Route::post('/create', 'ServiceController@store')->name('store');
 
 
+    });
+    /* Route::name('services.')->group(function () {
     }); */
 
     Route::get('/order', 'OrderController@create')->name('order_now');
-    Route::get('/services', 'SevicesController@index')->name('services.index');
     Route::get('/products', 'ProductController@index')->name('products.index');
     Route::get('/get_support', 'GetSupportController@index')->name('get_support.index');
 });

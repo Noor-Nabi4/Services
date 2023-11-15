@@ -131,7 +131,7 @@
                 Canceled
             </a>
         </div>
-        <table class="table table-striped mt-3">
+        <table class="table table-striped mt-3 table-responsive">
             <thead>
                 <tr>
                     <th scope="col">ID</th>
