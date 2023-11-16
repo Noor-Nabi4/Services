@@ -9,7 +9,8 @@ use Symfony\Component\Console\Input\Input;
 class ProductController extends Controller
 {
     public function index(){
-        return view('products.index');
+        $ProductsWithGrouping = (new Product)->getAllProductsWithGrouping();
+        return view('products.index',compact('ProductsWithGrouping'));
     }
     public function create(){
         return view('products.create');

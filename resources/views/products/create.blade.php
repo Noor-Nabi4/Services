@@ -14,7 +14,7 @@
             </div>
             <div class="col-md-6">
                 <label for="amount" class="form-label">Amount</label>
-                <input type="text" name="amount" id="amount" class="form-control w-100">
+                <input type="number" name="amount" id="amount" class="form-control w-100">
             </div>
             <div class="col-md-6">
                 <label for="discounted_amount" class="form-label">Discounted Amount</label>

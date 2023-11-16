@@ -16,9 +16,9 @@ return new class extends Migration
             $table->string('image');
             $table->string('type');
             $table->string('title');
-            $table->decimal('amount');
-            $table->decimal('discounted_amount');
-            $table->decimal('shipping_fees');
+            $table->decimal('amount', 9, 2);
+            $table->decimal('discounted_amount', 9, 2);
+            $table->decimal('shipping_fees', 9, 2);
             $table->timestamps();
         });
     }
