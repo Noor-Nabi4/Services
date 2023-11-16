@@ -38,7 +38,11 @@ Route::middleware([
     Route::get('/', 'OrderController@index')->name('index');
 
     });
+    Route::name('products.')->prefix('products')->group(function() {
+        Route::get('/', 'ProductController@index')->name('index');
+        Route::get('/create', 'ProductController@create')->name('create');
+        Route::post('/create', 'ProductController@store')->name('store');
+    });
 
-    Route::get('/products', 'ProductController@index')->name('products.index');
     Route::get('/get_support', 'GetSupportController@index')->name('get_support.index');
 });

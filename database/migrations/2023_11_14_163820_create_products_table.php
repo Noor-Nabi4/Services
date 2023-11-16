@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('title');
             $table->decimal('amount');
             $table->decimal('discounted_amount');
-            $table->decimal('shipping_amount');
+            $table->decimal('shipping_fees');
             $table->timestamps();
         });
     }
