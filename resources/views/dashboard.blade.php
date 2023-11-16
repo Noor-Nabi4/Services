@@ -45,11 +45,11 @@
         </div> --}}
     </x-slot>
     <div class="">
-        <h2 class="text-center my-3 font-arial" style="color: #916dfd">
+        <h4 class="text-center my-3 font-arial" style="color: #916dfd">
             <span class="font-EmojiOneColor">👋</span> Hi there,
             {{ Auth::user()->first_name . ' ' . Auth::user()->last_name }}!
             See your Statistics<span class="font-EmojiOneColor">👇</span>
-        </h2>
+        </h4>
         <div class="row my-2 justify-content-center">
             <div class="col-md-3 me-2">
                 <div class="total-details-card">
@@ -60,9 +60,9 @@
                     </svg>
                     <div class="d-inline-block">
                         <p class="text-center">Your Total Orders</p>
-                        <h1 class="text-center">
+                        <h3 class="text-center">
                             0
-                        </h1>
+                        </h3>
                     </div>
                     <div class="line"></div>
                 </div>
@@ -77,9 +77,9 @@
 
                     <div class="d-inline-block">
                         <p class="text-center">You Have Spent</p>
-                        <h1 class="text-center">
+                        <h3 class="text-center">
                             PKR 0.00
-                        </h1>
+                        </h3>
                     </div>
                     <div class="line"></div>
                 </div>
@@ -93,20 +93,20 @@
                     </svg>
                     <div class="d-inline-block">
                         <p class="text-center">Account status</p>
-                        <h1 class="text-center">
+                        <h3 class="text-center">
                            New
-                        </h1>
+                        </h3>
                     </div>
                     <div class="line"></div>
                 </div>
             </div>
         </div>
-        <h1 class="text-center text-white font-arial py-2 font-weight-bold d-flex justify-center align-items-center"
+        <h3 class="text-center text-white font-arial py-2 font-weight-bold d-flex justify-center align-items-center"
             style="background: #916dfd;border-radius:5px;">
             <img src="{{ asset('images/svg/History Icon.svg') }}" alt="Order History Icon" class="d-inline-block me-2"
                 height="1.5rem" style="height: 1.5rem">
             Orders History
-        </h1>
+        </h3>
         <div class="d-flex my-3 justify-content-center">
             <div class="" style="background: #916dfd" style="padding: 5px">
                 <img src="{{ asset('images/svg/Search.svg') }}" alt="Search" style="2rem">
@@ -130,8 +130,8 @@
             <a href="">
                 Canceled
             </a>
-        </div>
-        <table class="table table-striped mt-3 table-responsive">
+        </div class="table-responsive">
+        <table class="table table-striped mt-3 ">
             <thead>
                 <tr>
                     <th scope="col">ID</th>

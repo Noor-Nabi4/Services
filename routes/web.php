@@ -34,10 +34,11 @@ Route::middleware([
 
 
     });
-    /* Route::name('services.')->group(function () {
-    }); */
+    Route::name('order.')->prefix('order')->group(function() {
+    Route::get('/', 'OrderController@index')->name('index');
 
-    Route::get('/order', 'OrderController@create')->name('order_now');
+    });
+
     Route::get('/products', 'ProductController@index')->name('products.index');
     Route::get('/get_support', 'GetSupportController@index')->name('get_support.index');
 });

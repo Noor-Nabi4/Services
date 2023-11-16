@@ -50,70 +50,81 @@
         @if (session('success'))
             <div class="alert alert-success" role="alert">{{ session('success') }}</div>
         @endif
-        <div class="card-header d-flex justify-content-end">
-            <a href="{{ route('services.create') }}" class="btn btn-primary">Create</a>
-        </div>
-        <div class="card-body">
-            <table class="table table-stripedtable-responsive">
-                <thead>
-                    <tr>
-                        <th>
-                            ID
-                        </th>
-                        <th>
-                            Service
-                        </th>
-                        <th>
-                            Rate per 1000
-                        </th>
-                        <th>
-                            Min/Max
-                        </th>
-                        <th>
-                            Guarranty
-                        </th>
-                        <th>
-                            Avg. Time
-                        </th>
-                        <th>
-                            Description
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @forelse ($services as $service)
-                        <tr>
-                            <td>
-                                {{ $service->id }}
-                            </td>
-                            <td>
-                                {{ $service->name }}
-                            </td>
-                            <td>
-                                {{ $service->rate }}
-                            </td>
-                            <td>
-                                {{ $service->min_value }}/{{ $service->max_value }}
-                            </td>
-                            <td>
-                                {{ $service->guarranty }}
-                            </td>
-                            <td>
-                                {{ $service->avg_time }}
-                            </td>
-                            <td>
-                                {{ $service->description }}
-                            </td>
-                        </tr>
-
-                    @empty
-                        <td colspan="7" class="text-center">
-                            Record not found
-                        </td>
-                    @endforelse
-                </tbody>
-            </table>
-
+        @if (Auth::user()->is_admin)
+            <div class="card-header d-flex justify-content-end">
+                <a href="{{ route('services.create') }}" class="btn btn-primary">Create</a>
+            </div>
+        @endif
+        <div class="card-body table-responsive">
+            <div class="card border">
+                @foreach ($servicesGrouping as $key => $services)
+                    <div class="card-header bg-white border-0">
+                        <h5>{{ $key }}</h5>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        ID
+                                    </th>
+                                    <th>
+                                        Service
+                                    </th>
+                                    <th>
+                                        Rate per 1000
+                                    </th>
+                                    <th>
+                                        Min/Max
+                                    </th>
+                                    <th>
+                                        Guarranty
+                                    </th>
+                                    <th>
+                                        Avg. Time
+                                    </th>
+                                    <th>
+                                        Description
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @forelse ($services as $service)
+                                    <tr>
+                                        <td>
+                                            {{ $service['id'] }}
+                                        </td>
+                                        <td>
+                                            {{ $service['name'] }}
+                                        </td>
+                                        <td>
+                                            {{ $service['rate'] }}
+                                        </td>
+                                        <td>
+                                            {{ $service['min_value'] }}/{{ $service['max_value'] }}
+                                        </td>
+                                        <td>
+                                            {{ $service['guarranty'] }}
+                                        </td>
+                                        <td>
+                                            {{ $service['avg_time'] }}
+                                        </td>
+                                        <td>
+                                            {{ $service['description'] }}
+                                        </td>
+                                    </tr>
+                                @empty
+                                    <tr>
+                                        <td colspan="7" class="text-center">
+                                            Record not found
+                                        </td>
+                                    </tr>
+                                @endforelse
+                            </tbody>
+                        </table>
+                    </div>
+                @endforeach
+            </div>
         </div>
     </div>
 </x-app-layout>

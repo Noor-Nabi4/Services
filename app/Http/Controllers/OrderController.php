@@ -7,9 +7,9 @@ use Illuminate\Http\Request;
 class OrderController extends Controller
 {
     public function index(){
+        return view('Orders.index');
 
     }
     public function create(){
-        return view('Order_Now');
     }
 }

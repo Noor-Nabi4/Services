@@ -8,8 +8,13 @@ use Illuminate\Http\Request;
 class ServiceController extends Controller
 {
     public function index(){
-        $services = Service::all();
-        return view('services.index',compact('services'));
+        $services = Service::orderBy('type')->get()->toArray();
+        $servicesGrouping =[];
+        foreach($services as $data){
+            $servicesGrouping[$data['type']][] =$data;
+        }
+        //dd($servicesGrouping);
+        return view('services.index',compact('servicesGrouping'));
     }
     public function create(){
         return view('services.create');

@@ -29,11 +29,11 @@
         </div>
         <div class="">
 
-            <h2 class="text-center my-3 font-arial" style="color: #916dfd">
+            <h4 class="text-center my-3 font-arial" style="color: #916dfd">
                 <span class="font-EmojiOneColor">👋</span> Hi there,
                 {{ Auth::user()->first_name . ' ' . Auth::user()->last_name }}!
-                Ready to place new order ?
-            </h2>
+                Ready to place new order?
+            </h4>
         </div>
         <div class="row">
             <div class="col-md me-5">
@@ -136,9 +136,9 @@
                         <div class="flex justify-content-between align-items-center">
                             <div class="col flex justify-content-between align-items-center deatils pe-3 me-4">
                                 <div class="detail-sec">
-                                    <h4>
+                                    <h6>
                                         Start Time
-                                    </h4>
+                                    </h6>
                                     <p>
                                         0-2hrs
                                     </p>
@@ -149,9 +149,9 @@
                             </div>
                             <div class="col flex justify-content-between align-items-center deatils pe-3">
                                 <div class="detail-sec">
-                                    <h4>
+                                    <h6>
                                         Speed
-                                    </h4>
+                                    </h6>
                                     <p>
                                         100-150 per day
                                     </p>
@@ -166,9 +166,9 @@
                         <div class="flex justify-content-between align-items-center">
                             <div class="col flex justify-content-between align-items-center deatils pe-3 me-4">
                                 <div class="detail-sec">
-                                    <h4>
+                                    <h6>
                                         Guaranted
-                                    </h4>
+                                    </h6>
                                     <p>
                                         Lifetime
                                         <img src="{{ asset('images/svg/check.svg') }}" alt="check"
@@ -181,9 +181,9 @@
                             </div>
                             <div class="col flex justify-content-between align-items-center deatils pe-3">
                                 <div class="detail-sec">
-                                    <h4>
+                                    <h6>
                                         Averge Time
-                                    </h4>
+                                    </h6>
                                     <p>
                                         7 Days per 1000
                                     </p>
@@ -197,9 +197,9 @@
                     <div class="mb-3">
                         <div class="">
                             <div class="deatils detail-sec">
-                                <h4>
+                                <h6>
                                     Details
-                                </h4>
+                                </h6>
                                 <p class="mt-3">
                                     While placing the order, you have to paste your channel handle or link correctly,
                                     after that you have to paste your The handle should not be changed, if you

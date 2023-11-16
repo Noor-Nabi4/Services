@@ -41,7 +41,7 @@
                 $cRN = Route::currentRouteName();
                 $menuLinks = [
                     [
-                        'route' => 'order_now',
+                        'route' => 'order.index',
                         'logo' => 'Order Now',
                         'name' => 'Order Now',
                     ],
