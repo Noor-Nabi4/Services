@@ -460,19 +460,14 @@ footer {
 }
 
 .order-page-link {
-    padding-bottom: .3rem;
-}
-
-.order-page-link a {
+    cursor: pointer;
     color: #bdc1c2;
-}
-
-.order-page-link.active a{
-    color: #000;
+    padding-bottom: .3rem;
 }
 
 .order-page-link.active {
     border-bottom: 2px solid #916dfd;
+    color: #000;
 }
 
 .order-page-link {
@@ -480,7 +475,7 @@ footer {
 
 }
 
-.order-page-link a img {
+.order-page-link img {
     display: inline;
     height: 1rem;
 }

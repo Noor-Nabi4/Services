@@ -113,6 +113,9 @@
     @if (isset($footer))
         {{ $footer }}
     @endif
+    @if (isset($script))
+        {{ $script }}
+    @endif
     <script src="{{ asset('js/js.js') }}"></script>
 </body>
 

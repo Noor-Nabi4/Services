@@ -4,26 +4,26 @@
         <div class="row">
             <div class="col me-2 social-acconts">
                 <div class="social-account-link">
-                        <img src="{{ asset('images/svg/Youtube.svg') }}" alt="Youtube">
-                        Youtube
+                    <img src="{{ asset('images/svg/Youtube.svg') }}" alt="Youtube">
+                    Youtube
                 </div>
             </div>
             <div class="col me-2">
                 <div class="social-account-link">
-                        <img src="{{ asset('images/svg/Instagram.svg') }}" alt="Instagram">
-                        Instagram
+                    <img src="{{ asset('images/svg/Instagram.svg') }}" alt="Instagram">
+                    Instagram
                 </div>
             </div>
             <div class="col me-2">
                 <div class="social-account-link">
-                        <img src="{{ asset('images/svg/Facebook.svg') }}" alt="Facebook">
-                        Facebook
+                    <img src="{{ asset('images/svg/Facebook.svg') }}" alt="Facebook">
+                    Facebook
                 </div>
             </div>
             <div class="col me-2">
                 <div class="social-account-link">
-                        <img src="{{ asset('images/svg/tiktok.svg') }}" alt="tiktok">
-                        TikTok
+                    <img src="{{ asset('images/svg/tiktok.svg') }}" alt="tiktok">
+                    TikTok
                 </div>
             </div>
         </div>
@@ -40,22 +40,16 @@
                 <div class="order-card p-2 pt-4">
                     <div class=" mb-3 d-flex order-page-links">
                         <div class="order-page-link active">
-                            <a href="">
-                                <img src="{{ asset('images/svg/New ORDER.svg') }}" alt="New ORDER">
-                                New Order
-                            </a>
+                            <img src="{{ asset('images/svg/New ORDER.svg') }}" alt="New ORDER">
+                            New Order
                         </div>
                         <div class="order-page-link">
-                            <a href="">
-                                <img src="{{ asset('images/svg/New ORDER.svg') }}" alt="New ORDER">
-                                My Favorites
-                            </a>
+                            <img src="{{ asset('images/svg/My Favorite.svg') }}" alt="New ORDER">
+                            My Favorites
                         </div>
                         <div class="order-page-link">
-                            <a href="">
-                                <img src="{{ asset('images/svg/Search brown.svg') }}" alt="Search">
-                                Search By ID
-                            </a>
+                            <img src="{{ asset('images/svg/Search brown.svg') }}" alt="Search">
+                            Search By ID
                         </div>
                     </div>
                     <div class="mb-3">
@@ -215,4 +209,12 @@
                 </div>
             </div>
         </div>
+
+        <x-slot name="script">
+            <script>
+                const handleClickOnNewOrder = () => {
+
+                }
+            </script>
+        </x-slot>
 </x-app-layout>
