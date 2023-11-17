@@ -21,10 +21,6 @@
                 <input type="number" name="discounted_amount" id="discounted_amount" class="form-control w-100">
             </div>
             <div class="col-md-6">
-                <label for="shipping_fees" class="form-label">Shipping Fees</label>
-                <input type="number" name="shipping_fees" id="shipping_fees" class="form-control w-100">
-            </div>
-            <div class="col-md-6">
                 <label for="type" class="form-label">Type</label>
                 <select name="type" id="type" class="form-control w-100" required>
                     <option value="" selected disabled>Select a type of product</option>

@@ -39,7 +39,7 @@
             <div class="col-md me-5">
                 <div class="order-card p-2 pt-4">
                     <div class=" mb-3 d-flex order-page-links">
-                        <div class="order-page-link">
+                        <div class="order-page-link active">
                             <a href="">
                                 <img src="{{ asset('images/svg/New ORDER.svg') }}" alt="New ORDER">
                                 New Order
@@ -96,7 +96,9 @@
                         </label>
                         <input type="text" class="form-control w-100">
                     </div>
-
+                    <div class="mb-3">
+                        <button type="submit" style="background: #916dfd;color:#fff" class="btn">Buy Now</button>
+                    </div>
                 </div>
             </div>
             <div class="col-md">

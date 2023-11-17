@@ -68,21 +68,26 @@
                 ];
             @endphp
             <header class=" mx-4" style="background: #0056b30d;">
-                <div class="max-w-7xl mx-auto py-3 px-4 sm:px-6 lg:px-8">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="row menu-links">
                         @foreach ($menuLinks as $menuLink)
                             @php
                                 $route = route($menuLink['route']);
-                                $color = $cRN == $menuLink['route'] ? ' White' : ' Blue';
+                                $color =' Blue';
+                                $class ='';
+                                if(str_contains($cRN, $menuLink['route'])){
+                                    $color =' White';
+                                    $class = 'active-menu';
+                                }
                                 $logo = $menuLink['logo'] . $color . '.svg';
                                 $imgSrc = asset('images/svg/' . $logo);
+
                             @endphp
-                            <div class="col">
+                            <div class="col py-3 {{ $class }}">
                                 <a href="{{ $route }}" class="text-uppercase">
                                     <img src="{{ $imgSrc }}" alt="{{ $menuLink['name'] }}">
                                     <h6>
                                         {{ $menuLink['name'] }}
-
                                     </h6>
                                 </a>
                             </div>

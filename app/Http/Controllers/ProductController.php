@@ -4,12 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
-use Symfony\Component\Console\Input\Input;
 
 class ProductController extends Controller
 {
     public function index(){
         $ProductsWithGrouping = (new Product)->getAllProductsWithGrouping();
+
+        //$productTypes = (new Product)->getAllProductsTypes();
         return view('products.index',compact('ProductsWithGrouping'));
     }
     public function create(){

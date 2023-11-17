@@ -58,8 +58,7 @@
                                         RS. {{ $product->amount }}
                                     </p>
                                     <p>
-                                        {{ $product->shipping_fees > 0 ? 'Shipping Fees: RS. ' . $product->shipping_fees : 'Free shipping' }}
-
+                                        Free shipping
                                     </p>
                                 </div>
                                 <a href="#" class=""

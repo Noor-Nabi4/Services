@@ -13,7 +13,6 @@ class Product extends Model
         'type',
         'amount',
         'discounted_amount',
-        'shipping_fees',
         'image',
     ];
     public function getAllProductsWithGrouping(){
@@ -38,5 +37,8 @@ class Product extends Model
         }
         return $productsGrouping;
     }
+    /* public function getAllProductsTypes(){
+        $f
+    } */
 
 }
