@@ -13,14 +13,13 @@ return new class extends Migration
     {
         Schema::create('services', function (Blueprint $table) {
             $table->id();
-            $table->string('type');
-            $table->string('name');
-            $table->string('rate');
-            $table->string('min_value');
-            $table->string('max_value');
-            $table->string('avg_time');
-            $table->string('description');
-            $table->string('guarranty');
+            $table->string('type')->nullable();
+            $table->string('name')->nullable();
+            $table->decimal('rate', 9, 2)->nullable();
+            $table->decimal('min_value', 9, 2)->nullable();
+            $table->decimal('max_value', 9, 2)->nullable();
+            $table->bigInteger('avg_time')->nullable();
+            $table->longText('description')->nullable();
             $table->timestamps();
         });
     }

@@ -30,14 +30,10 @@
                 <input type="number" name="max_value" id="max_value" class="form-control w-100">
             </div>
             <div class="col-md-6">
-                <label for="guarranty" class="form-label">Guarranty</label>
-                <input type="text" name="guarranty" id="guarranty" class="form-control w-100">
-            </div>
-            <div class="col-md-6">
                 <label for="avg_time" class="form-label">
                     Avg. Time
                 </label>
-                <input type="text" name="avg_time" id="avg_time" class="form-control w-100">
+                <input type="number" name="avg_time" id="avg_time" class="form-control w-100">
             </div>
             <div class="col-md-12">
                 <label for="description" class="form-label">

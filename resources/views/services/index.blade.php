@@ -50,11 +50,11 @@
         @if (session('success'))
             <div class="alert alert-success" role="alert">{{ session('success') }}</div>
         @endif
-        @if (Auth::user()->is_admin)
-            <div class="card-header d-flex justify-content-end">
-                <a href="{{ route('services.create') }}" class="btn btn-primary">Create</a>
-            </div>
-        @endif
+        {{-- @if (Auth::user()->is_admin) --}}
+        <div class="card-header d-flex justify-content-end">
+            <a href="{{ route('services.create') }}" class="btn btn-primary">Create</a>
+        </div>
+        {{-- @endif --}}
         <div class="card-body table-responsive">
             <div class="card border">
                 @foreach ($servicesGrouping as $key => $services)
@@ -83,7 +83,7 @@
                                     <th>
                                         Avg. Time
                                     </th>
-                                    <th>
+                                    <th style="max-width: fit-content">
                                         Description
                                     </th>
                                 </tr>
@@ -98,19 +98,27 @@
                                             {{ $service['name'] }}
                                         </td>
                                         <td>
-                                            {{ $service['rate'] }}
+                                            PKR {{ $service['rate'] }}
                                         </td>
                                         <td>
                                             {{ $service['min_value'] }}/{{ $service['max_value'] }}
                                         </td>
                                         <td>
-                                            {{ $service['guarranty'] }}
+                                            <p style="background: #ffba53;color:#fff;border-radius:5px;padding:0 2px" class="d-inline">
+                                                Lifetime
+
+                                            </p>
                                         </td>
                                         <td>
-                                            {{ $service['avg_time'] }}
+                                            {{ $service['avg_time'] }} Days
                                         </td>
                                         <td>
-                                            {{ $service['description'] }}
+                                            <div class="d-inline-block"
+                                                style="background: #916dfd; color:#fff;max-width: fit-content;border-radius:10px;padding:0 5px" class="d-inline-block">
+                                                <img src="{{ asset('images/svg/detail Info.svg') }}" alt="" class="d-inline-block">
+                                                Details
+                                            </div>
+                                            {{-- {{ $service['description'] }} --}}
                                         </td>
                                     </tr>
                                 @empty
