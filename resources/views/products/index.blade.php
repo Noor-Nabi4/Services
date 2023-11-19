@@ -70,7 +70,7 @@
                 @foreach ($Products as $product)
                     <div class="col-md-3 me-2 my-2">
                         <div class="card" style="max-width: 18rem;">
-                            <img src="{{ asset('Product images/' . $product->image) }}" class="card-img-top"
+                            <img src="{{ asset('Product_images/' . $product->image) }}" class="card-img-top"
                                 alt="{{ $product->title }}">
                             <div class="card-body">
                                 <h6 class="card-title text-center font-Roboto">

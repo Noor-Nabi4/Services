@@ -21,7 +21,7 @@ class ProductController extends Controller
         try {
             $data =$request->all();
             $filename = time().'.'.$request->image->getClientOriginalExtension();
-            request()->image->move(public_path('Product images'), $filename);
+            request()->image->move(public_path('Product_images'), $filename);
 
             $data['image']=$filename;
             Product::create($data);
