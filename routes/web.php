@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ServiceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,6 +30,7 @@ Route::middleware([
     Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
     Route::name('services.')->prefix('services')->group(function() {
     Route::get('/', 'ServiceController@index')->name('index');
+    Route::get('/ajax/{value?}', 'ServiceController@ajax')->name('ajax');
     Route::get('/create', 'ServiceController@create')->name('create');
     Route::post('/create', 'ServiceController@store')->name('store');
 

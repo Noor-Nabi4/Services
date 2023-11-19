@@ -7,8 +7,9 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
-    public function index($type = null){
+    public function index(Request $request,$type = null){
         $Products = (new Product)->getProducts($type);
+        dd($request->all());
 
         $ProductsTypes = (new Product)->getAllProductsTypes();
         // dd($ProductsTypes);
