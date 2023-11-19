@@ -546,3 +546,14 @@ th {
 .price-color {
     color: #f57224;
 }
+
+.category {
+    padding: 1px 8px 2px 0;
+    background: #e5f0f7;
+    color: #6a7e99;
+}
+
+.active-category {
+    background: #876bf8;
+    color: #fff;
+}

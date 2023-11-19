@@ -40,28 +40,21 @@
         <div class="card-body">
             <div class="d-flex justify-content-center">
                 @foreach ($ProductsTypes as $ProductsType)
+                    @php
+                        $color = ' Blue';
+                        $class = '';
+                        if ($ProductsType['type'] == $type) {
+                            $color = ' White';
+                            $class = 'active-category';
+                        }
+                        $logo = $ProductsType['type'] . $color . '.svg';
+                        $imgSrc = asset('images/svg/' . $logo);
+                    @endphp
                     <div class="me-1">
-                        <a href="" class="d-flex" style="background: #876bf8;color: #fff;
-                        padding: 1px 8px 2px 0;">
-                            @switch($ProductsType['type'])
-                                @case('Showpiece')
-                                    <img src="{{ asset('images/svg/ShowPiece White.svg') }}" alt="ShowPiece"
-                                        style="width: 1.3rem;margin-right: 0.5rem;">
-                                    Showpiece
-                                @break
-
-                                @case('E_commerce')
-                                    <img src="{{ asset('images/svg/E_commerce Blue.svg') }}" alt="E_commerce"
-                                        style="width: 1.3rem;margin-right: 0.5rem;">
-                                    E-commerce
-                                @break
-
-                                @case('Subscriptions')
-                                    <img src="{{ asset('images/svg/Subscription White.svg') }}" alt="Subscription"
-                                        style="width: 1.3rem;margin-right: 0.5rem;">
-                                    Subscriptions
-                                @break
-                            @endswitch
+                        <a href="{{ route('products.index', $ProductsType['type']) }}" class="d-flex category {{ $class }}">
+                            <img src="{{ $imgSrc }}" alt="{{ $ProductsType['type'] }}"
+                                style="width: 1.3rem;margin-right: 0.5rem;">
+                            {{ $ProductsType['type'] }}
                         </a>
                     </div>
                 @endforeach
@@ -73,8 +66,9 @@
                             <img src="{{ asset('Product_images/' . $product->image) }}" class="card-img-top"
                                 alt="{{ $product->title }}">
                             <div class="card-body">
-                                <h6 class="card-title text-center font-Roboto">
-                                    {{ $product->title }}
+                                <h6 class="card-title text-center font-Roboto"
+                                    style="min-height: 2.5rem;overflow:hidden" title="{{ $product->title }}">
+                                    {{ strlen($product->title) > 47 ? substr($product->title, 0, 47) . '...' : $product->title }}
                                 </h6>
                                 <h5 class="price-color">
                                     RS. {{ $product->discounted_amount }}

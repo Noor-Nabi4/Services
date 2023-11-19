@@ -187,7 +187,7 @@
                             <div class="d-inline-block"
                                 style="background: #916dfd; color:#fff;max-width: fit-content;border-radius:10px;padding:0 5px"
                                 class="d-inline-block">
-                                <img src="{{ asset('images/svg/detail Info.svg') }}" alt=""
+                                <img src="{{ asset('images/svg/Order Again.svg') }}" alt=""
                                     class="d-inline-block">
                                 Order Again
                             </div>

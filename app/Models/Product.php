@@ -15,8 +15,10 @@ class Product extends Model
         'discounted_amount',
         'image',
     ];
-    public function getAllProducts(){
-        $products = Product::all();
+    public function getProducts($type){
+        $products = Product::when($type, function ($query, $type) {
+            $query->where('type', $type);
+        })->get();
         return $products;
     }
     public function getAllProductsTypes(){
