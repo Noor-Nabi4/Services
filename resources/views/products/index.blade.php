@@ -32,24 +32,50 @@
         @if (session('success'))
             <div class="alert alert-success text-center" role="alert">{{ session('success') }}</div>
         @endif
-        {{-- @if (Auth::user()->is_admin) --}}
-        <div class="card-header d-flex justify-content-end">
-            <a href="{{ route('products.create') }}" class="btn btn-primary">Create</a>
-        </div>
-        {{-- @endif --}}
+        @if (Auth::user()->is_admin)
+            <div class="card-header d-flex justify-content-end">
+                <a href="{{ route('products.create') }}" class="btn btn-primary">Create</a>
+            </div>
+        @endif
         <div class="card-body">
-            @foreach ($ProductsWithGrouping as $products)
-            @endforeach
+            <div class="d-flex justify-content-center">
+                @foreach ($ProductsTypes as $ProductsType)
+                    <div class="me-1">
+                        <a href="" class="d-flex" style="background: #876bf8;color: #fff;
+                        padding: 1px 8px 2px 0;">
+                            @switch($ProductsType['type'])
+                                @case('Showpiece')
+                                    <img src="{{ asset('images/svg/ShowPiece White.svg') }}" alt="ShowPiece"
+                                        style="width: 1.3rem;margin-right: 0.5rem;">
+                                    Showpiece
+                                @break
+
+                                @case('E_commerce')
+                                    <img src="{{ asset('images/svg/E_commerce Blue.svg') }}" alt="E_commerce"
+                                        style="width: 1.3rem;margin-right: 0.5rem;">
+                                    E-commerce
+                                @break
+
+                                @case('Subscriptions')
+                                    <img src="{{ asset('images/svg/Subscription White.svg') }}" alt="Subscription"
+                                        style="width: 1.3rem;margin-right: 0.5rem;">
+                                    Subscriptions
+                                @break
+                            @endswitch
+                        </a>
+                    </div>
+                @endforeach
+            </div>
             <div class="row my-2 justify-content-center">
-                @foreach ($products as $product)
+                @foreach ($Products as $product)
                     <div class="col-md-3 me-2 my-2">
                         <div class="card" style="max-width: 18rem;">
                             <img src="{{ asset('Product images/' . $product->image) }}" class="card-img-top"
                                 alt="{{ $product->title }}">
                             <div class="card-body">
-                                <h4 class="card-title text-center font-Roboto">
+                                <h6 class="card-title text-center font-Roboto">
                                     {{ $product->title }}
-                                </h4>
+                                </h6>
                                 <h5 class="price-color">
                                     RS. {{ $product->discounted_amount }}
                                 </h5>

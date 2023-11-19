@@ -8,10 +8,11 @@ use Illuminate\Http\Request;
 class ProductController extends Controller
 {
     public function index(){
-        $ProductsWithGrouping = (new Product)->getAllProductsWithGrouping();
+        $Products = (new Product)->getAllProducts();
 
-        //$productTypes = (new Product)->getAllProductsTypes();
-        return view('products.index',compact('ProductsWithGrouping'));
+        $ProductsTypes = (new Product)->getAllProductsTypes();
+        // dd($ProductsTypes);
+        return view('products.index',compact('Products','ProductsTypes'));
     }
     public function create(){
         return view('products.create');

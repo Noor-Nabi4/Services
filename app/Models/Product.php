@@ -15,30 +15,13 @@ class Product extends Model
         'discounted_amount',
         'image',
     ];
-    public function getAllProductsWithGrouping(){
-        $products = Product::orderBy('type','desc')->get();
-        //dd($products);
-
-        $productsGrouping =[];
-        foreach($products as $product){
-            switch ($product['type']) {
-                case 'Showpiece':
-                    $productsGrouping['Showpiece'][] =$product;
-                    break;
-                case 'Subscriptions':
-                    $productsGrouping['Subscriptions'][] =$product;
-                    break;
-                case 'E_commerce':
-                    $productsGrouping['E_commerce'][] =$product;
-                    break;
-                default:
-                    break;
-            }
-        }
-        return $productsGrouping;
+    public function getAllProducts(){
+        $products = Product::all();
+        return $products;
     }
-    /* public function getAllProductsTypes(){
-        $f
-    } */
+    public function getAllProductsTypes(){
+        return $ProductsTypes = Product::distinct()->get('type')->toArray();
+
+    }
 
 }
