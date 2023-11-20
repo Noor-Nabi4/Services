@@ -17,6 +17,6 @@ class DashboardController extends Controller
         'info',
         'REorder'
     ];
-        return view('dashboard',compact('orders'));
+        return view('dashboard.index',compact('orders'));
     }
 }
