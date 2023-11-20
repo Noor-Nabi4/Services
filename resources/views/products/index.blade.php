@@ -20,7 +20,7 @@
         </div>
     </div>
 
-    <h3 class="text-center text-white font-arial py-2 font-weight-bold d-flex justify-center align-items-center my-3"
+    <h3 class="text-center text-white font-arial py-2 font-weight-bold d-flex justify-content-center align-items-center my-3"
         style="background: #916dfd;border-radius:5px;
         font-family: Raleway;
         font-weight: 600">

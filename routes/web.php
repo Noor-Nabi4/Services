@@ -30,7 +30,7 @@ Route::middleware([
     Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
     Route::name('services.')->prefix('services')->group(function() {
     Route::get('/', 'ServiceController@index')->name('index');
-    Route::get('/ajax/{value?}', 'ServiceController@ajax')->name('ajax');
+    Route::get('/ajax/{search?}', 'ServiceController@ajax')->name('ajax');
     Route::get('/create', 'ServiceController@create')->name('create');
     Route::post('/create', 'ServiceController@store')->name('store');
 
@@ -42,10 +42,9 @@ Route::middleware([
     });
     Route::name('products.')->prefix('products')->group(function() {
         Route::get('/{type?}', 'ProductController@index')->name('index');
-        Route::get('/{type?}/ajax/{value?}', 'ProductController@ajax')->name('ajax');
+        Route::get('/{type?}/ajax/{search?}', 'ProductController@ajax')->name('ajax');
         Route::get('/create', 'ProductController@create')->name('create');
         Route::post('/create', 'ProductController@store')->name('store');
     });
-
     Route::get('/get_support', 'GetSupportController@index')->name('get_support.index');
 });

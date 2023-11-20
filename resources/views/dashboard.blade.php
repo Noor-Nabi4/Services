@@ -1,48 +1,5 @@
 <x-app-layout>
     <x-slot name="header">
-        {{-- <div class="row menu-links">
-            <div class="col">
-                <a href="" class="text-uppercase">
-                    <img src="{{ asset('images/svg/Order Now Icon Blue.svg') }}" alt="Order Now Icon">
-                    <h6>
-                        Order Now
-
-                    </h6>
-                </a>
-            </div>
-            <div class="col">
-                <a href="" class="text-uppercase">
-                    <img src="{{ asset('images/svg/Services Icon Blue.svg') }}" alt="Order Now Icon">
-                    <h6>
-                        Services
-                    </h6>
-                </a>
-            </div>
-            <div class="col">
-                <a href="" class="text-uppercase">
-                    <img src="{{ asset('images/svg/Get Support Icon Blue.svg') }}" alt="Order Now Icon">
-                    <h6>
-                        Get Support
-                    </h6>
-                </a>
-            </div>
-            <div class="col">
-                <a href="" class="text-uppercase">
-                    <img src="{{ asset('images/svg/Marketplace Products Icon Blue.svg') }}" alt="Order Now Icon">
-                    <h6>
-                        Our PRODUCTS
-                    </h6>
-                </a>
-            </div>
-            <div class="col">
-                <a href="" class="text-uppercase">
-                    <img src="{{ asset('images/svg/Dashboard Icon Blue.svg') }}" alt="Order Now Icon">
-                    <h6>
-                        Dashboard
-                    </h6>
-                </a>
-            </div>
-        </div> --}}
     </x-slot>
     <div class="">
         <h4 class="text-center my-3 font-arial" style="color: #916dfd">
@@ -53,7 +10,7 @@
         <div class="row my-2 justify-content-center">
             <div class="col-md-3 me-2">
                 <div class="total-details-card">
-                    <div class="flex align-items-end">
+                    <div class="d-flex justify-content-center align-items-end">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                             width="4rem" height="58px">
                             <image x="0px" y="0px" width="2.3rem" height="2rem"
@@ -71,7 +28,7 @@
             </div>
             <div class="col-md-3 me-2">
                 <div class="total-details-card">
-                    <div class="flex align-items-end">
+                    <div class="d-flex justify-content-center align-items-end">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                             width="4rem" height="58px" viewBox="0 0 54 52">
                             <image id="_03hwg6qforaartph" data-name="03hwg6qforaartph" width="2.3rem" height="2rem"
@@ -90,7 +47,7 @@
             </div>
             <div class="col-md-3 me-2">
                 <div class="total-details-card">
-                    <div class="flex align-items-end">
+                    <div class="d-flex justify-content-center align-items-end">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                             width="4rem" height="58px">
                             <image x="0px" y="0px" width="2.3rem" height="2rem"
@@ -107,7 +64,7 @@
                 </div>
             </div>
         </div>
-        <h3 class="text-center text-white font-arial py-2 font-weight-bold d-flex justify-center align-items-center"
+        <h3 class="text-center text-white font-arial py-2 font-weight-bold d-flex justify-content-center align-items-center"
             style="background: #916dfd;border-radius:5px;">
             <img src="{{ asset('images/svg/History Icon.svg') }}" alt="Order History Icon" class="d-inline-block me-2"
                 height="1.5rem" style="height: 1.5rem">

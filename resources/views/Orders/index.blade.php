@@ -113,7 +113,7 @@
                     </div>
                     <div class="mb-3">
                         <div class="deatils pe-3">
-                            <div class="flex justify-content-between align-items-center">
+                            <div class="d-flex justify-content-between align-items-center">
                                 <div class="detail-sec">
                                     <p>
                                         Example Link
@@ -130,7 +130,7 @@
                     </div>
                     <div class="mb-3">
                         <div class="flex justify-content-between align-items-center">
-                            <div class="col flex justify-content-between align-items-center deatils pe-3 me-4">
+                            <div class="col d-flex justify-content-between align-items-center deatils pe-3">
                                 <div class="detail-sec">
                                     <h6>
                                         Start Time
@@ -143,7 +143,7 @@
                                     <img src="{{ asset('images/svg/Start Time.svg') }}" alt="Start Time">
                                 </div>
                             </div>
-                            <div class="col flex justify-content-between align-items-center deatils pe-3">
+                            <div class="col d-flex justify-content-between align-items-center deatils pe-3">
                                 <div class="detail-sec">
                                     <h6>
                                         Speed
@@ -160,7 +160,7 @@
                     </div>
                     <div class="mb-3">
                         <div class="flex justify-content-between align-items-center">
-                            <div class="col flex justify-content-between align-items-center deatils pe-3 me-4">
+                            <div class="col d-flex justify-content-between align-items-center deatils pe-3">
                                 <div class="detail-sec">
                                     <h6>
                                         Guaranted
@@ -175,7 +175,7 @@
                                     <img src="{{ asset('images/svg/Guaranty.svg') }}" alt="Guaranty">
                                 </div>
                             </div>
-                            <div class="col flex justify-content-between align-items-center deatils pe-3">
+                            <div class="col d-flex justify-content-between align-items-center deatils pe-3">
                                 <div class="detail-sec">
                                     <h6>
                                         Averge Time
