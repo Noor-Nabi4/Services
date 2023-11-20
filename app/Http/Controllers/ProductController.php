@@ -7,12 +7,9 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
-    public function index(Request $request,$type = null){
+    public function index($type = null){
         $Products = (new Product)->getProducts($type);
-        dd($request->all());
-
         $ProductsTypes = (new Product)->getAllProductsTypes();
-        // dd($ProductsTypes);
         return view('products.index',compact('Products','ProductsTypes','type'));
     }
     public function create(){
@@ -30,6 +27,17 @@ class ProductController extends Controller
         } catch (\Throwable $th) {
             dd($th);
             //throw $th;
+        }
+    }
+    public function ajax(Request $request,$type=null,$search = null)
+    {
+        try {
+            $Products =(new Product)->getProducts($type,$search);
+        $html = view('products.include.data', compact('Products'))->render();
+
+        return response()->json(compact('html'));
+        } catch (\Exception $e) {
+            return response()->json(['error' => $e->getMessage()], 500);
         }
     }
 

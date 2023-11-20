@@ -15,10 +15,17 @@ class Product extends Model
         'discounted_amount',
         'image',
     ];
-    public function getProducts($type){
+    public function getProducts($type=null,$search=null){
         $products = Product::when($type, function ($query, $type) {
             $query->where('type', $type);
-        })->get();
+        });
+        if(!empty($search)){
+            $products = $products->where('title', 'LIKE',"%{$search}%")
+            ->orWhere('type', 'LIKE',"%{$search}%")
+            ->orWhere('amount', 'LIKE',"%{$search}%")
+            ->orWhere('discounted_amount', 'LIKE',"%{$search}%");
+        }
+        $products = $products->get();
         return $products;
     }
     public function getAllProductsTypes(){

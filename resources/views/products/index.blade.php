@@ -13,7 +13,7 @@
             <div class="" style="background: #916dfd" style="padding: 5px">
                 <img src="{{ asset('images/svg/Search.svg') }}" alt="Search">
             </div>
-            <input type="text" class="form-control w-100">
+            <input type="text" class="form-control w-100" id="search">
             <button type="submit" class="d-block" style="background: #916dfd" style="padding: 5px">
                 <img src="{{ asset('images/svg/Search.svg') }}" alt="Search" style="2rem">
             </button>
@@ -51,7 +51,8 @@
                         $imgSrc = asset('images/svg/' . $logo);
                     @endphp
                     <div class="me-1">
-                        <a href="{{ route('products.index', $ProductsType['type']) }}" class="d-flex category {{ $class }}">
+                        <a href="{{ route('products.index', $ProductsType['type']) }}"
+                            class="d-flex category {{ $class }}">
                             <img src="{{ $imgSrc }}" alt="{{ $ProductsType['type'] }}"
                                 style="width: 1.3rem;margin-right: 0.5rem;">
                             {{ $ProductsType['type'] }}
@@ -59,37 +60,14 @@
                     </div>
                 @endforeach
             </div>
-            <div class="row my-2 justify-content-center">
-                @foreach ($Products as $product)
-                    <div class="col-md-3 me-2 my-2">
-                        <div class="card" style="max-width: 18rem;">
-                            <img src="{{ asset('Product_images/' . $product->image) }}" class="card-img-top"
-                                alt="{{ $product->title }}">
-                            <div class="card-body">
-                                <h6 class="card-title text-center font-Roboto"
-                                    style="min-height: 2.5rem;overflow:hidden" title="{{ $product->title }}">
-                                    {{ strlen($product->title) > 47 ? substr($product->title, 0, 47) . '...' : $product->title }}
-                                </h6>
-                                <h5 class="price-color">
-                                    RS. {{ $product->discounted_amount }}
-                                </h5>
-                                <div class="flex justify-content-between">
-                                    <p class="text-decoration-line-through grey">
-                                        RS. {{ $product->amount }}
-                                    </p>
-                                    <p>
-                                        Free shipping
-                                    </p>
-                                </div>
-                                <a href="#" class=""
-                                    style="background: #7750f6;color: #fff;margin: 0 auto;display: block;max-width: fit-content;padding: 0.25rem;border-radius: 10px;">
-                                    Buy Now
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
+            <div class="row my-2 justify-content-center" id="data-container">
+                @include('products.include.data')
             </div>
         </div>
     </div>
+    <x-slot name="script">
+        <script>
+            fillterData("{{ str_replace(url('/'), '', url()->current()) }}");
+        </script>
+    </x-slot>
 </x-app-layout>

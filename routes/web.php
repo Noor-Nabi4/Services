@@ -42,6 +42,7 @@ Route::middleware([
     });
     Route::name('products.')->prefix('products')->group(function() {
         Route::get('/{type?}', 'ProductController@index')->name('index');
+        Route::get('/{type?}/ajax/{value?}', 'ProductController@ajax')->name('ajax');
         Route::get('/create', 'ProductController@create')->name('create');
         Route::post('/create', 'ProductController@store')->name('store');
     });
