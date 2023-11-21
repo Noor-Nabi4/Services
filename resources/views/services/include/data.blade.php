@@ -37,7 +37,7 @@
                                 {{ $service['id'] }}
                             </td>
                             <td>
-                                {{ $service['name'] }}
+                                {{ $service['service'] }}
                             </td>
                             <td>
                                 PKR {{ $service['rate'] }}

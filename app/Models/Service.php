@@ -9,12 +9,16 @@ class Service extends Model
 {
     use HasFactory;
     protected $fillable =[
-        'type',
-        'name',
+        'category_id',
+        'service',
         'rate',
         'min_value',
         'max_value',
         'avg_time',
+        'start_time_from',
+        'start_time_to',
+        'speed_from',
+        'speed_to',
         'description',
         'guarranty'
     ];
@@ -26,10 +30,10 @@ class Service extends Model
         return $servicesGrouping;
     }
     public function getServices($search=null){
-        $services = Service::orderBy('type');
+        $services = Service::orderBy('service');
         if(!empty($search)){
             $services = $services->where('type', 'LIKE',"%{$search}%")
-            ->orWhere('name', 'LIKE',"%{$search}%")
+            ->orWhere('service', 'LIKE',"%{$search}%")
             ->orWhere('rate', 'LIKE',"%{$search}%")
             ->orWhere('min_value', 'LIKE',"%{$search}%")
             ->orWhere('max_value', 'LIKE',"%{$search}%")

@@ -13,16 +13,21 @@ return new class extends Migration
     {
         Schema::create('services', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->nullable();
-            $table->decimal('rate', 9, 2)->nullable();
-            $table->decimal('min_value', 9, 2)->nullable();
-            $table->decimal('max_value', 9, 2)->nullable();
-            $table->bigInteger('avg_time')->nullable();
+            $table->string('service');
+            $table->decimal('rate', 9, 2);
+            $table->decimal('min_value', 9, 2);
+            $table->decimal('max_value', 9, 2);
+            $table->bigInteger('avg_time')->comment('In Minutes');
             $table->longText('description')->nullable();
-            $table->unsignedBigInteger('category_id')->nullable();
+            $table->bigInteger('start_time_from')->comment('In Minutes');
+            $table->bigInteger('start_time_to')->comment('In Minutes');
+            $table->bigInteger('speed_from');
+            $table->bigInteger('speed_to');
+            $table->bigInteger('guarranty')->nullable()->comment('In Days');
+            $table->unsignedBigInteger('category_id');
             $table->unsignedBigInteger('user_id')->nullable();
             $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('category_id')->references('id')->on('category');
+            $table->foreign('category_id')->references('id')->on('categories');
             $table->timestamps();
         });
     }

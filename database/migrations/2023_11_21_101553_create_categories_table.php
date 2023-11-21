@@ -1,8 +1,9 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
+use App\Models\Category;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
 return new class extends Migration
 {
@@ -16,6 +17,15 @@ return new class extends Migration
             $table->string('name');
             $table->timestamps();
         });
+        $categories = [
+            ['name'=>'YouTube'],
+            ['name'=>'Instagram'],
+            ['name'=>'Facebook'],
+            ['name'=>'Tiktok'],
+        ];
+        foreach ($categories as $Category){
+            Category::create($Category);
+        }
     }
 
     /**
