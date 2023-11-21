@@ -29,10 +29,10 @@ class ProductController extends Controller
             //throw $th;
         }
     }
-    public function ajax(Request $request,$type=null,$search = null)
+    public function ajax(Request $request,$search = null)
     {
         try {
-            $Products =(new Product)->getProducts($type,$search);
+            $Products =(new Product)->getProducts("",$search);
         $html = view('products.include.data', compact('Products'))->render();
 
         return response()->json(compact('html'));

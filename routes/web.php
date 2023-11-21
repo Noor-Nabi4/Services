@@ -41,10 +41,10 @@ Route::middleware([
 
     });
     Route::name('products.')->prefix('products')->group(function() {
-        Route::get('/{type?}', 'ProductController@index')->name('index');
-        Route::get('/{type?}/ajax/{search?}', 'ProductController@ajax')->name('ajax');
+        Route::get('/ajax/{search?}', 'ProductController@ajax')->name('ajax');
         Route::get('/create', 'ProductController@create')->name('create');
         Route::post('/create', 'ProductController@store')->name('store');
+        Route::get('/{type?}', 'ProductController@index')->name('index');
     });
     Route::get('/get_support', 'GetSupportController@index')->name('get_support.index');
 });

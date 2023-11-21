@@ -18,6 +18,8 @@ return new class extends Migration
             $table->string('title')->nullable();
             $table->decimal('amount', 9, 2)->nullable();
             $table->decimal('discounted_amount', 9, 2)->nullable();
+            $table->unsignedBigInteger('user_id')->nullable();
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }

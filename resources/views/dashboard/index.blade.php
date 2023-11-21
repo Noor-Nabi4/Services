@@ -111,7 +111,7 @@
                 @foreach ($orders as $order)
                     <tr>
                         <td>
-                            001
+                            {{ $srNo++ }}
                         </td>
                         <td>
                             Youtube
@@ -120,7 +120,6 @@
                             Link
                         </td>
                         <td>
-
                             <p style="background: #916dfd;color:#fff;border-radius:5px;padding:0 2px" class="d-inline">
                                 in progress
                             </p>

@@ -67,7 +67,7 @@
     </div>
     <x-slot name="script">
         <script>
-            fillterData("{{ str_replace(url('/'), '', url()->current()) }}");
+            fillterData("/products");
         </script>
     </x-slot>
 </x-app-layout>
