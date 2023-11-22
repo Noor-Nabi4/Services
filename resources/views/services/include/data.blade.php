@@ -31,10 +31,13 @@
                     </tr>
                 </thead>
                 <tbody>
+                    @php
+                        $SrNo = 1;
+                    @endphp
                     @forelse ($services as $service)
                         <tr>
                             <td>
-                                {{ $service['id'] }}
+                                {{ $SrNo++ }}
                             </td>
                             <td>
                                 {{ $service['service'] }}
@@ -48,12 +51,13 @@
                             <td>
                                 <p style="background: #ffba53;color:#fff;border-radius:5px;padding:0 2px"
                                     class="d-inline">
-                                    Lifetime
+
+                                    {{ $service['guarranty'] == null ? 'Lifetime' : $service['guarranty'] . ' Days' }}
 
                                 </p>
                             </td>
                             <td>
-                                {{ $service['avg_time'] }} Days
+                                {{ dd(Helper::convert_minutesToHours($service['avg_time'])) }} Days
                             </td>
                             <td>
                                 <div class="d-inline-block"

@@ -1,5 +1,5 @@
 <?php
-
+use App\Helpers\Helper;
 use Illuminate\Support\Facades\Facade;
 use Illuminate\Support\ServiceProvider;
 
@@ -185,6 +185,7 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'Example' => App\Facades\Example::class,
+        'Helper' => Helper::class,
     ])->toArray(),
 
 ];

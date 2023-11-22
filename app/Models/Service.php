@@ -25,12 +25,12 @@ class Service extends Model
     public function servicesGrouping($services){
         $servicesGrouping=[];
         foreach($services as $data){
-            $servicesGrouping[$data['type']][] =$data;
+            $servicesGrouping[$data['category_id']][] =$data;
         }
         return $servicesGrouping;
     }
     public function getServices($search=null){
-        $services = Service::orderBy('service');
+        $services = Service::orderBy('category_id');
         if(!empty($search)){
             $services = $services->where('type', 'LIKE',"%{$search}%")
             ->orWhere('service', 'LIKE',"%{$search}%")

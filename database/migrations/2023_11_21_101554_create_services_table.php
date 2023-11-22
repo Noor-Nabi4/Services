@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('services', function (Blueprint $table) {
             $table->id();
             $table->string('service');
-            $table->decimal('rate', 9, 2);
-            $table->decimal('min_value', 9, 2);
-            $table->decimal('max_value', 9, 2);
+            $table->decimal('rate', 9, 0);
+            $table->decimal('min_value', 9, 0);
+            $table->decimal('max_value', 9, 0);
             $table->bigInteger('avg_time')->comment('In Minutes');
             $table->longText('description')->nullable();
             $table->bigInteger('start_time_from')->comment('In Minutes');
