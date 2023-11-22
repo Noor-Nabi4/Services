@@ -57,7 +57,8 @@
                                 </p>
                             </td>
                             <td>
-                                {{ dd(Helper::convert_minutesToHours($service['avg_time'])) }} Days
+                                {{ Helper::convertMinutesToHoursAndDays($service['avg_time'])[0] }}
+                                {{-- {{ $service['avg_time'] }} --}}
                             </td>
                             <td>
                                 <div class="d-inline-block"
