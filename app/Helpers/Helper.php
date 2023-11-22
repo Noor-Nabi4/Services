@@ -18,7 +18,6 @@ class Helper
         $hours = $hours % 24;
 
 
-
         $string = $days>0 ? round($days)." Days ":"";
         $string .= $hours > 0 ? round($hours)." Hours ":"";
         $string .= $minutes > 0 ? round($minutes)." Minutes ":"";

@@ -37,16 +37,16 @@
                     @forelse ($services as $service)
                         <tr>
                             <td>
-                                {{ $SrNo++ }}
+                                {{ $service['id'] }}
                             </td>
                             <td>
                                 {{ $service['service'] }}
                             </td>
                             <td>
-                                PKR {{ $service['rate'] }}
+                                PKR {{ round($service['rate']) }}
                             </td>
                             <td>
-                                {{ $service['min_value'] }}/{{ $service['max_value'] }}
+                                {{ round($service['min_value']) }}/{{ round($service['max_value']) }}
                             </td>
                             <td>
                                 <p style="background: #ffba53;color:#fff;border-radius:5px;padding:0 2px"
