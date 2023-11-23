@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class OrderController extends Controller
 {
     public function index(){
-        $Category = Category::all();
+        $Category = (new Category)->getAllServicesCategory();
         return view('Orders.index',compact('Category'));
     }
     public function create(){

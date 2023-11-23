@@ -37,7 +37,7 @@ const dependentDropDown = (route, pick, destination) => {
                 '<option value="" selected disabled selected>-- Please Select --</option>';
             for (const key in data) {
                 result = data[key];
-                dataContainer.innerHTML += `<option value="${result.id}">${result.service}</option>`;
+                dataContainer.innerHTML += `<option value="${result.id}">${result.name}</option>`;
             }
         } catch (error) {
             console.error("Error:", error);
@@ -63,7 +63,7 @@ const fetchServicesDataAndSetInOrder = () => {
                 max_value.innerHTML = maxValue;
                 quantity.min = minValue;
                 quantity.max = maxValue;
-                rate.setAttribute("value", parseInt(data.rate));
+                rate.setAttribute("value", parseInt(data.amount));
             } catch (error) {
                 console.error("Error:", error);
             }

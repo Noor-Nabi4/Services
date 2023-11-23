@@ -20,4 +20,7 @@ class Category extends Model
     public function getAllProductCategory(){
         return Category::where('is_product',1)->get();
     }
+    public function getAllServicesCategory(){
+        return Category::where('is_product',0)->get();
+    }
 }

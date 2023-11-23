@@ -40,10 +40,10 @@
                                 {{ $service['id'] }}
                             </td>
                             <td>
-                                {{ $service['service'] }}
+                                {{ $service['name'] }}
                             </td>
                             <td>
-                                PKR {{ round($service['rate']) }}
+                                PKR {{ round($service['amount']) }}
                             </td>
                             <td>
                                 {{ round($service['min_value']) }}/{{ round($service['max_value']) }}
