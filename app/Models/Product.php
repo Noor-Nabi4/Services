@@ -28,9 +28,5 @@ class Product extends Model
         $products = $products->get();
         return $products;
     }
-    public function getAllProductsTypes(){
-        return $ProductsTypes = Product::distinct()->get('type')->toArray();
-
-    }
 
 }

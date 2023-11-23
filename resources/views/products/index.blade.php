@@ -38,23 +38,23 @@
         @endif
         <div class="card-body">
             <div class="d-flex justify-content-center">
-                @foreach ($ProductsTypes as $ProductsType)
+                @foreach ($ProductCategorys as $ProductCategory)
                     @php
                         $color = ' Blue';
                         $class = '';
-                        if ($ProductsType['type'] == $type) {
+                        if ($ProductCategory['name'] == $type) {
                             $color = ' White';
                             $class = 'active-category';
                         }
-                        $logo = $ProductsType['type'] . $color . '.svg';
+                        $logo = $ProductCategory['name'] . $color . '.svg';
                         $imgSrc = asset('images/svg/' . $logo);
                     @endphp
                     <div class="me-1">
-                        <a href="{{ route('products.index', $ProductsType['type']) }}"
+                        <a href="{{ route('products.index', $ProductCategory['name']) }}"
                             class="d-flex category {{ $class }}">
-                            <img src="{{ $imgSrc }}" alt="{{ $ProductsType['type'] }}"
+                            <img src="{{ $imgSrc }}" alt="{{ $ProductCategory['name'] }}"
                                 style="width: 1.3rem;margin-right: 0.5rem;">
-                            {{ $ProductsType['type'] }}
+                            {{ $ProductCategory['name'] }}
                         </a>
                     </div>
                 @endforeach

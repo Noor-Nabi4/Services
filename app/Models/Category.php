@@ -11,9 +11,13 @@ class Category extends Model
     use HasFactory;
     protected $fillable =[
         'name',
+        'is_product'
     ];
     public function Services()
     {
         return $this->hasMany(Service::class);
+    }
+    public function getAllProductCategory(){
+        return Category::where('is_product',1)->get();
     }
 }

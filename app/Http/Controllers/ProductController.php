@@ -3,14 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
     public function index($type = null){
         $Products = (new Product)->getProducts($type);
-        $ProductsTypes = (new Product)->getAllProductsTypes();
-        return view('products.index',compact('Products','ProductsTypes','type'));
+        $ProductCategorys = (new Category)->getAllProductCategory();
+        return view('products.index',compact('Products','ProductCategorys','type'));
     }
     public function create(){
         return view('products.create');
