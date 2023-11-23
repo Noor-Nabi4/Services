@@ -1,4 +1,4 @@
-<?php // Code within app\Helpers\Helper.php
+<?php
 
 namespace App\Helpers;
 
@@ -9,7 +9,7 @@ class Helper
     public static function convertMinutesToHoursAndDays($minutes)
     {
 
-        // Extract hours and minutes from the duration
+        // Extract hours and minutes
         $hours = floor($minutes / 60);
         $minutes = $minutes % 60;
 

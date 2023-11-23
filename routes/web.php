@@ -40,6 +40,11 @@ Route::middleware([
     Route::get('/', 'OrderController@index')->name('index');
 
     });
+
+    Route::name('category.')->prefix('category')->group(function() {
+        Route::get('/{category}/{ajax?}', 'CategoryController@getAllServicesByCategoryId')->name('getAllServicesByCategoryId');
+
+        });
     Route::name('products.')->prefix('products')->group(function() {
         Route::get('/ajax/{search?}', 'ProductController@ajax')->name('ajax');
         Route::get('/create', 'ProductController@create')->name('create');

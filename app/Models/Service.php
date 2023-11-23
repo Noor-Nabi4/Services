@@ -32,7 +32,7 @@ class Service extends Model
     public function getServices($search=null){
         $services = Service::orderBy('category_id');
         if(!empty($search)){
-            $services = $services->where('type', 'LIKE',"%{$search}%")
+            $services = $services->where('category_id', 'LIKE',"%{$search}%")
             ->orWhere('service', 'LIKE',"%{$search}%")
             ->orWhere('rate', 'LIKE',"%{$search}%")
             ->orWhere('min_value', 'LIKE',"%{$search}%")

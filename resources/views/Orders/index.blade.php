@@ -52,43 +52,55 @@
                             Search By ID
                         </div>
                     </div>
-                    <div class="mb-3">
+                    {{-- <div class="mb-3">
                         <div class="d-flex">
                             <div class="" style="background: #916dfd" style="padding: 5px">
                                 <img src="{{ asset('images/svg/Search.svg') }}" alt="Search" style="2rem">
                             </div>
                             <input type="text" class="form-control w-100">
                         </div>
-                    </div>
+                    </div> --}}
                     <div class="mb-3">
-                        <label for="Category" class="form-label">
+                        <label for="category_id" class="form-label">
                             Category
                         </label>
-                        <input type="text" class="form-control w-100">
+                        <select name="category_id" id="category_id" class="form-select w-100" required>
+                            <option value="" selected disabled>Select Category</option>
+                            @foreach ($Category as $data)
+                                <option value="{{ $data->id }}">{{ $data->name }}</option>
+                            @endforeach
+                        </select>
                     </div>
                     <div class="mb-3">
-                        <label for="Category" class="form-label">
+                        <label for="service_id" class="form-label">
                             Service
                         </label>
-                        <input type="text" class="form-control w-100">
+                        <select name="service_id" id="service_id" class="form-select">
+
+                        </select>
                     </div>
                     <div class="mb-3">
-                        <label for="Category" class="form-label">
+                        <label for="link" class="form-label">
                             Link
                         </label>
-                        <input type="text" class="form-control w-100">
+                        <input type="url" class="form-control w-100" name="link" id="link">
                     </div>
                     <div class="mb-3">
-                        <label for="Category" class="form-label">
+                        <label for="quantity" class="form-label">
                             Quantity
                         </label>
-                        <input type="text" class="form-control w-100">
+                        <input type="text" class="form-control w-100" name="quantity" id="quantity"min=""
+                            max="">
+                        <div class="">
+                            Min: <span class="min_quantity"></span> -
+                            Max: <span class="max_quantity"></span>
+                        </div>
                     </div>
                     <div class="mb-3">
-                        <label for="Category" class="form-label">
+                        <label for="price" class="form-label">
                             Price
                         </label>
-                        <input type="text" class="form-control w-100">
+                        <input type="text" class="form-control w-100" name="price" id="price">
                     </div>
                     <div class="mb-3">
                         <button type="submit" style="background: #916dfd;color:#fff" class="btn">Buy Now</button>
@@ -212,9 +224,7 @@
 
         <x-slot name="script">
             <script>
-                const handleClickOnNewOrder = () => {
-
-                }
+                dependentDropDown("/category", "category_id", "service_id");
             </script>
         </x-slot>
 </x-app-layout>
