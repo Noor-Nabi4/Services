@@ -23,12 +23,15 @@ class ServiceController extends Controller
     {
         try {
             $servicesGrouping =(new Service)->getServices($search);
+            $html = view('services.include.data', compact('servicesGrouping'))->render();
 
-        $html = view('services.include.data', compact('servicesGrouping'))->render();
-
-        return response()->json(compact('html'));
+            return response()->json(compact('html'));
         } catch (\Exception $e) {
             return response()->json(['error' => $e->getMessage()], 500);
         }
+    }
+    public function details(Service $service){
+        return response()->json($service);
+
     }
 }

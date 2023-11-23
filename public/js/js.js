@@ -17,7 +17,6 @@ const fetchDataRequest = async (route) => {
 const fillterData = (route) => {
     const dataContainer = document.getElementById("data-container");
     document.getElementById("search").addEventListener("input", async (e) => {
-        e.preventDefault();
         try {
             let search = e.target.value;
             const data = await fetchDataRequest(route + "/ajax/" + search);
@@ -30,7 +29,6 @@ const fillterData = (route) => {
 const dependentDropDown = (route, pick, destination) => {
     const dataContainer = document.getElementById(destination);
     document.getElementById(pick).addEventListener("change", async (e) => {
-        e.preventDefault();
         let value = e.target.value;
         try {
             const data = await fetchDataRequest(route + "/" + value + "/1");
@@ -44,4 +42,28 @@ const dependentDropDown = (route, pick, destination) => {
             console.error("Error:", error);
         }
     });
+};
+const fetchServicesDataAndSetInOrder = () => {
+    document
+        .getElementById("service_id")
+        .addEventListener("change", async (e) => {
+            const min_value = document.getElementById("min_value");
+            const max_value = document.getElementById("max_value");
+            const quantity = document.getElementById("quantity");
+            const rate = document.getElementById("rate");
+            const value = e.target.value;
+            const data = await fetchDataRequest("/services/" + value);
+            const minValue = parseInt(data.min_value);
+            const maxValue = parseInt(data.max_value);
+            min_value.innerHTML = minValue;
+            max_value.innerHTML = maxValue;
+            quantity.setAttribute("min", minValue);
+            quantity.setAttribute("max", maxValue);
+            rate.setAttribute("value", parseInt(data.rate));
+            // rate.innerHTML = ;
+            try {
+            } catch (error) {
+                console.error("Error:", error);
+            }
+        });
 };

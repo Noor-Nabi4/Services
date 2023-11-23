@@ -33,6 +33,7 @@ Route::middleware([
     Route::get('/ajax/{search?}', 'ServiceController@ajax')->name('ajax');
     Route::get('/create', 'ServiceController@create')->name('create');
     Route::post('/create', 'ServiceController@store')->name('store');
+    Route::get('/{service}', 'ServiceController@details')->name('details');
 
 
     });

@@ -92,8 +92,8 @@
                         <input type="text" class="form-control w-100" name="quantity" id="quantity"min=""
                             max="">
                         <div class="">
-                            Min: <span class="min_quantity"></span> -
-                            Max: <span class="max_quantity"></span>
+                            Min: <span id="min_value">0</span> -
+                            Max: <span id="max_value">0</span>
                         </div>
                     </div>
                     <div class="mb-3">
@@ -101,6 +101,7 @@
                             Price
                         </label>
                         <input type="text" class="form-control w-100" name="price" id="price">
+                        <input type="hidden" name="rate" id="rate">
                     </div>
                     <div class="mb-3">
                         <button type="submit" style="background: #916dfd;color:#fff" class="btn">Buy Now</button>
@@ -221,10 +222,10 @@
                 </div>
             </div>
         </div>
-
         <x-slot name="script">
             <script>
                 dependentDropDown("/category", "category_id", "service_id");
+                fetchServicesDataAndSetInOrder();
             </script>
         </x-slot>
 </x-app-layout>

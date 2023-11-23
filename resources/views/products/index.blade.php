@@ -1,5 +1,4 @@
 <x-app-layout>
-
     <x-slot name="header"></x-slot>
     <div class="mt-5 heading">
         <h1>
