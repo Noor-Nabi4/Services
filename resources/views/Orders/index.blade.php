@@ -89,18 +89,17 @@
                         <label for="quantity" class="form-label">
                             Quantity
                         </label>
-                        <input type="text" class="form-control w-100" name="quantity" id="quantity"min=""
-                            max="">
+                        <input type="text" class="form-control w-100" name="quantity" id="quantity">
                         <div class="">
-                            Min: <span id="min_value">0</span> -
-                            Max: <span id="max_value">0</span>
+                            Min: <span id="min_value"></span> -
+                            Max: <span id="max_value"></span>
                         </div>
                     </div>
                     <div class="mb-3">
                         <label for="price" class="form-label">
                             Price
                         </label>
-                        <input type="text" class="form-control w-100" name="price" id="price">
+                        <input type="text" class="form-control w-100" name="price" id="price" readonly>
                         <input type="hidden" name="rate" id="rate">
                     </div>
                     <div class="mb-3">
@@ -226,6 +225,7 @@
             <script>
                 dependentDropDown("/category", "category_id", "service_id");
                 fetchServicesDataAndSetInOrder();
+                setPrice();
             </script>
         </x-slot>
 </x-app-layout>
