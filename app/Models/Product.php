@@ -9,19 +9,19 @@ class Product extends Model
 {
     use HasFactory;
     protected $fillable=[
-        'title',
-        'type',
+        'name',
+        'category_id',
         'amount',
         'discounted_amount',
         'image',
     ];
     public function getProducts($type=null,$search=null){
         $products = Product::when($type, function ($query, $type) {
-            $query->where('type', $type);
+            $query->where('category_id', $type);
         });
         if(!empty($search)){
-            $products = $products->where('title', 'LIKE',"%{$search}%")
-            ->orWhere('type', 'LIKE',"%{$search}%")
+            $products = $products->where('name', 'LIKE',"%{$search}%")
+            ->orWhere('category_id', 'LIKE',"%{$search}%")
             ->orWhere('amount', 'LIKE',"%{$search}%")
             ->orWhere('discounted_amount', 'LIKE',"%{$search}%");
         }

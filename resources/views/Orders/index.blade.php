@@ -47,10 +47,10 @@
                             <img src="{{ asset('images/svg/My Favorite.svg') }}" alt="New ORDER">
                             My Favorites
                         </div>
-                        <div class="order-page-link">
+                        {{-- <div class="order-page-link">
                             <img src="{{ asset('images/svg/Search brown.svg') }}" alt="Search">
                             Search By ID
-                        </div>
+                        </div> --}}
                     </div>
                     {{-- <div class="mb-3">
                         <div class="d-flex">
@@ -80,13 +80,13 @@
                         </select>
                     </div>
                     <div class="mb-3">
-                        <label for="link" class="form-label">
+                        <label for="url" class="form-label">
                             Link
                         </label>
-                        <input type="url" class="form-control w-100" name="link" id="link">
+                        <input type="url" class="form-control w-100" name="url" id="url">
                     </div>
                     <div class="mb-3">
-                        <label for="quantity" class="form-label">
+                        <label for="number" class="form-label">
                             Quantity
                         </label>
                         <input type="text" class="form-control w-100" name="quantity" id="quantity">
@@ -99,7 +99,7 @@
                         <label for="price" class="form-label">
                             Price
                         </label>
-                        <input type="text" class="form-control w-100" name="price" id="price" readonly>
+                        <input type="number" class="form-control w-100" name="price" id="price" readonly>
                         <input type="hidden" name="rate" id="rate">
                     </div>
                     <div class="mb-3">

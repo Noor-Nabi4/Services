@@ -14,14 +14,18 @@ return new class extends Migration
     {
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
+            $table->boolean('is_product')->default(true)->comment('1 for product category and 0 for service category');
             $table->string('name');
             $table->timestamps();
         });
         $categories = [
-            ['name'=>'YouTube'],
-            ['name'=>'Instagram'],
-            ['name'=>'Facebook'],
-            ['name'=>'Tiktok'],
+            ['name'=>'YouTube','is_product'=>0],
+            ['name'=>'Instagram','is_product'=>0],
+            ['name'=>'Facebook','is_product'=>0],
+            ['name'=>'Tiktok','is_product'=>0],
+            ['name'=>'Showpiece'],
+            ['name'=>'Subscriptions'],
+            ['name'=>'E Commerce'],
         ];
         foreach ($categories as $Category){
             Category::create($Category);

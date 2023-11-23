@@ -10,8 +10,8 @@ class Service extends Model
     use HasFactory;
     protected $fillable =[
         'category_id',
-        'service',
-        'rate',
+        'name',
+        'amount',
         'min_value',
         'max_value',
         'avg_time',
@@ -33,8 +33,8 @@ class Service extends Model
         $services = Service::orderBy('category_id');
         if(!empty($search)){
             $services = $services->where('category_id', 'LIKE',"%{$search}%")
-            ->orWhere('service', 'LIKE',"%{$search}%")
-            ->orWhere('rate', 'LIKE',"%{$search}%")
+            ->orWhere('name', 'LIKE',"%{$search}%")
+            ->orWhere('amount', 'LIKE',"%{$search}%")
             ->orWhere('min_value', 'LIKE',"%{$search}%")
             ->orWhere('max_value', 'LIKE',"%{$search}%")
             ->orWhere('avg_time', 'LIKE',"%{$search}%")

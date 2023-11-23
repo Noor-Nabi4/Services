@@ -86,7 +86,7 @@ const valuesEmpty = (destination = null) => {
     document.getElementById("min_value").innerHTML = "";
     document.getElementById("max_value").innerHTML = "";
     document.getElementById("rate").removeAttribute("value");
-    document.getElementById("price").removeAttribute("value");
+    document.getElementById("price").value = "";
     const quantity = document.getElementById("quantity");
     quantity.removeAttribute("min");
     quantity.removeAttribute("max");

@@ -9,8 +9,9 @@ class Order extends Model
 {
     use HasFactory;
     protected $fillable =[
+        'url',
+        'charges',
         'service_id',
         'quantity',
-        'link',
     ];
 }
