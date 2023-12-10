@@ -65,7 +65,11 @@ class OrderController extends Controller
 
     }
     public function SUCCESS(Request $request){
-        dd($request->all());
+        $original_basket_id = $request->basket_id;
+        $merchant_id = env('MERCHANT_ID', '');
+        $order =Order::find($original_basket_id);
+        $response = $this->processResponse($merchant_id, $original_basket_id, $order->TXNAMT, $request->all());
+        dd($response,"OK");
     }
     public function FAILURE(Request $request){
         $original_basket_id = $request->basket_id;
@@ -77,8 +81,8 @@ class OrderController extends Controller
     private function getAccessToken($merchant_id, $secured_key,$product,$BASKET_ID) {
         $basket_id = $BASKET_ID;
         $trans_amount = $product->discounted_amount;
-        $tokenApiUrl = 'https://ipg1.apps.net.pk/Ecommerce/api/Transaction/GetAccessToken';
-        // $tokenApiUrl = 'https://ipguat.apps.net.pk/Ecommerce/api/Transaction/GetAccessToken';
+        // $tokenApiUrl = 'https://ipg1.apps.net.pk/Ecommerce/api/Transaction/GetAccessToken';
+         $tokenApiUrl = 'https://ipguat.apps.net.pk/Ecommerce/api/Transaction/GetAccessToken';
         $urlPostParams = sprintf(
         'MERCHANT_ID=%s&SECURED_KEY=%s&TXNAMT=%s&BASKET_ID=%s',
         $merchant_id,
@@ -100,23 +104,13 @@ class OrderController extends Controller
         return $token;
     }
     function processResponse($merchant_id, $original_basket_id, $txnamt, $response){
-        dd($response);
-        $err_code = $response['err_code'];
-        $response_key = $response['Response_Key'];
-        $secretword = env('SECREETWORD','');
-        $response_string = sprintf("%s%s%s%s%s", $merchant_id,
-        $original_basket_id, $secretword, $txnamt, $err_code);
-        $response_hash = hash('MD5', $response_string);
-        /* if (strtolower($response_hash) != strtolower($response_key)) {
-            return null;
-        } */
+
         return [
             'transaction_id'=>$response['transaction_id'],
             'code' => $response['err_code'],
             'message' => $response['err_msg'],
             'basket_id' =>$response['basket_id'],
             'Response_Key' => $response['Response_Key'],
-            'payment_name' => $response['payment_name'],
         ];
     }
     private  function generateOrderNo(){

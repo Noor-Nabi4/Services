@@ -48,10 +48,10 @@
                             My Favorites
                         </div> --}}
                     </div>
-                    {{-- <form action="https://ipguat.apps.net.pk/Ecommerce/api/Transaction/PostTransaction"
-                        method="post"id="OrderForm"> --}}
-                        <form action="https://ipg1.apps.net.pk/Ecommerce/api/Transaction/PostTransaction"
+                    <form action="https://ipguat.apps.net.pk/Ecommerce/api/Transaction/PostTransaction"
                         method="post"id="OrderForm">
+                        {{-- <form action="https://ipg1.apps.net.pk/Ecommerce/api/Transaction/PostTransaction"
+                        method="post"id="OrderForm"> --}}
                         <div class="mb-3">
                             <label for="name" class="form-label">
                                 Item Name
