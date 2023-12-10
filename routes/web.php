@@ -57,7 +57,7 @@ Route::middleware([
         Route::post('/create', 'ProductController@store')->name('store');
         Route::get('/{type?}', 'ProductController@index')->name('index');
     });
-    Route::get('/get_support', 'GetSupportController@index')->name('get_support.index');
+    //Route::get('/get_support', 'GetSupportController@index')->name('get_support.index');
 });
 
 Route::get('/pay', 'PayFastController@Pay')->name('pyfast');

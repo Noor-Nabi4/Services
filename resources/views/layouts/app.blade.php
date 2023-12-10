@@ -50,11 +50,11 @@
                         'logo' => 'Services',
                         'name' => 'Services',
                     ],
-                    [
+                    /* [
                         'route' => 'get_support.index',
                         'logo' => 'Get Support',
                         'name' => 'Get Support',
-                    ],
+                    ], */
                     [
                         'route' => 'products.index',
                         'logo' => 'Marketplace Products',

@@ -5,8 +5,8 @@
             👋 Hi there, xyz! We are happy to assist you! Any questions or help needed, feel free to reach out.
         </h1>
     </div>
-    <img src="{{ asset('images/svg/Support.svg') }}" alt="Support" class="m-auto">
-    <div class="flex justify-content-center support_buttons mt-3 pb-3">
+    <img src="{{ asset('images/svg/Support.svg') }}" alt="Support" class="m-auto d-block">
+    <div class="d-flex justify-content-center support_buttons mt-3 pb-3">
         <div class="">
             <a href="">
                 <img src="{{ asset('images/svg/MAIN ORDER.svg') }}" alt="Main Order">

@@ -6,9 +6,6 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
         Schema::create('orders', function (Blueprint $table) {
@@ -28,9 +25,9 @@ return new class extends Migration
             $table->string('issuer_name')->nullable()->comment("from pay fast");
             $table->decimal('TXNAMT', 11, 2);
             $table->string('postal_code')->nullable();
-            $table->unsignedBigInteger('quantity')->nullable();
-            $table->unsignedBigInteger('state_id');
-            $table->unsignedBigInteger('city_id');
+            $table->unsignedBigInteger('quantity')->default(1);
+            $table->unsignedBigInteger('state_id')->nullable();
+            $table->unsignedBigInteger('city_id')->nullable();
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('product_id')->nullable();
             $table->unsignedBigInteger('service_id')->nullable();
