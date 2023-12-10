@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ProductController extends Controller
 {
@@ -14,11 +15,13 @@ class ProductController extends Controller
         return view('products.index',compact('Products','ProductCategorys','type'));
     }
     public function create(){
-        return view('products.create');
+        $categories = (new Category)->getAllProductCategory();
+        return view('products.create',compact('categories'));
     }
     public function store(Request $request){
         try {
             $data =$request->all();
+            $data['user_id'] = Auth::user()->id;
             $filename = time().'.'.$request->image->getClientOriginalExtension();
             request()->image->move(public_path('Product_images'), $filename);
 

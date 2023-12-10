@@ -39,6 +39,11 @@ Route::middleware([
     });
     Route::name('order.')->prefix('order')->group(function() {
     Route::get('/', 'OrderController@index')->name('index');
+    Route::get('/checkout/{product}', 'OrderController@checkoutProduct')->name('checkoutProduct');
+    Route::post('/checkout}', 'OrderController@store')->name('store');
+    Route::get('/SUCCESS', 'OrderController@SUCCESS')->name('SUCCESS');
+    Route::get('/FAILURE', 'OrderController@FAILURE')->name('FAILURE');
+    Route::get('/cities/{id}/{ajax?}', 'OrderController@getallCitiesByState')->name('cities');
 
     });
 
@@ -54,3 +59,5 @@ Route::middleware([
     });
     Route::get('/get_support', 'GetSupportController@index')->name('get_support.index');
 });
+
+Route::get('/pay', 'PayFastController@Pay')->name('pyfast');

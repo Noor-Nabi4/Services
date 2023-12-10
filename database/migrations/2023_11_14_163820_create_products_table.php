@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('image');
             $table->decimal('amount', 11, 2);
             $table->decimal('discounted_amount', 9, 2)->nullable();
+            $table->longText('description')->nullable();
             $table->unsignedBigInteger('category_id');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');

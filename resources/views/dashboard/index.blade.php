@@ -121,14 +121,14 @@
                         </td>
                         <td>
                             <p style="background: #916dfd;color:#fff;border-radius:5px;padding:0 2px" class="d-inline">
-                                in progress
+                                {{ $order->status }}
                             </p>
                         </td>
                         <td>
-                            Pkr 3800
+                            Pkr {{ $order->TXNAMT }}
                         </td>
                         <td>
-                            1000
+                            {{ $order->quantity }}
                         </td>
                         <td>
                             <div class="d-inline-block"

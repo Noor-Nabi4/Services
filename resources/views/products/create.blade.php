@@ -9,8 +9,8 @@
         @csrf
         <div class="row">
             <div class="col-md-6">
-                <label for="title" class="form-label">Title</label>
-                <input type="text" name="title" id="title" class="form-control w-100">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" name="name" id="name" class="form-control w-100">
             </div>
             <div class="col-md-6">
                 <label for="amount" class="form-label">Amount</label>
@@ -21,17 +21,22 @@
                 <input type="number" name="discounted_amount" id="discounted_amount" class="form-control w-100">
             </div>
             <div class="col-md-6">
-                <label for="type" class="form-label">Type</label>
-                <select name="type" id="type" class="form-control w-100" required>
+                <label for="category_id" class="form-label">Category</label>
+                <select name="category_id" id="category_id" class="form-control w-100" required>
                     <option value="" selected disabled>Select a type of product</option>
-                    <option value="Showpiece">Showpiece</option>
-                    <option value="Subscriptions">Subscriptions</option>
-                    <option value="E_commerce">E-commerce</option>
+                    @foreach ($categories as $category)
+                        <option value="{{ $category->id }}">{{ $category->name }}</option>
+                    @endforeach
                 </select>
             </div>
             <div class="col-md-6">
                 <label for="image" class="form-label">image</label>
                 <input type="file" name="image" id="image" class="form-control w-100">
+            </div>
+            <div class="col-12">
+                <label for="description">Description</label>
+                <textarea name="description" id="description" cols="30" rows="10" class="form-control w-100"
+                    required></textarea>
             </div>
         </div>
         <button type="submit" class="btn btn-primary mt-3">Save</button>

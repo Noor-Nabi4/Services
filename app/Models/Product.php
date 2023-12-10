@@ -11,8 +11,10 @@ class Product extends Model
     protected $fillable=[
         'name',
         'category_id',
+        'user_id',
         'amount',
         'discounted_amount',
+        'description',
         'image',
     ];
     public function getProducts($type=null,$search=null){

@@ -223,7 +223,7 @@
         </div>
         <x-slot name="script">
             <script>
-                dependentDropDown("/category", "category_id", "service_id");
+                dependentDropDown("/cities", "category_id", "service_id");
                 fetchServicesDataAndSetInOrder();
                 setPrice();
             </script>
